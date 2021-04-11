@@ -5880,9 +5880,9 @@ $(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Mkhalf\Desktop\medical\resources\js\backend\before.js */"./resources/js/backend/before.js");
-__webpack_require__(/*! C:\Users\Mkhalf\Desktop\medical\resources\js\backend\app.js */"./resources/js/backend/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Mkhalf\Desktop\medical\resources\js\backend\after.js */"./resources/js/backend/after.js");
+__webpack_require__(/*! C:\Users\dream\Desktop\medical\resources\js\backend\before.js */"./resources/js/backend/before.js");
+__webpack_require__(/*! C:\Users\dream\Desktop\medical\resources\js\backend\app.js */"./resources/js/backend/app.js");
+module.exports = __webpack_require__(/*! C:\Users\dream\Desktop\medical\resources\js\backend\after.js */"./resources/js/backend/after.js");
 
 
 /***/ })

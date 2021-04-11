@@ -72,7 +72,7 @@
                         @lang('menus.backend.sidebar.profiles')
                     </a>
                 </li>
-<!--
+
                 <li class="nav-item">
                     <a class="nav-link {{
                         active_class(Route::is('admin/pages'))
@@ -82,20 +82,20 @@
                     </a>
                 </li>
 
-                <li class="divider"></li> -->
+                <li class="divider"></li>
 
-                <!-- <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link {{
                         active_class(Route::is('admin/faqs'))
                     }}" href="{{ route('admin.faqs.index') }}">
                         <i class="nav-icon fas fa-question-circle"></i>
                         @lang('menus.backend.sidebar.faqs')
                     </a>
-                </li> -->
+                </li>
 
-                <!-- <li class="divider"></li> -->
+                <li class="divider"></li>
 
-                <!-- <li class="nav-item">
+            <li class="nav-item">
                     <a class="nav-link {{
                         active_class(Route::is('admin/email-templates'))
                     }}" href="{{ route('admin.email-templates.index') }}">
@@ -104,9 +104,9 @@
                     </a>
                 </li>
 
-                <li class="divider"></li> -->
+                <li class="divider"></li>
 
-                <!-- <li class="nav-item nav-dropdown {{
+                <li class="nav-item nav-dropdown {{
                     active_class(Route::is('admin/blogs'), 'open')
                     }}">
                     <a class="nav-link nav-dropdown-toggle {{
@@ -141,9 +141,9 @@
                     </ul>
                 </li>
 
-                <li class="divider"></li> -->
+                <li class="divider"></li>
 
-                <!-- <li class="nav-item nav-dropdown {{
+                <li class="nav-item nav-dropdown {{
                     active_class(Route::is('admin/log-viewer*'), 'open')
                     }}">
                         <a class="nav-link nav-dropdown-toggle {{
@@ -172,7 +172,7 @@
                     </ul>
                 </li>
 
-                <li class="divider"></li> -->
+                <li class="divider"></li>
 
                 <li class="nav-item">
                     <a class="nav-link {{
