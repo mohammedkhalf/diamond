@@ -16,6 +16,7 @@ use App\Models\Order;
 use App\Http\Responses\RedirectResponse;
 use App\Models\Auth\User;
 use App\Models\Drug;
+use App\Notifications\Backend\Auth\PurchaseReminder;
 
 class OrderController extends Controller
 {
@@ -115,5 +116,11 @@ class OrderController extends Controller
         $orderData = Order::findOrFail($id);
         $orderData->delete();
         return new RedirectResponse(route('admin.orders.index'), ['flash_success' => __('alerts.backend.orders.deleted')]);
+    }
+    //send whatsapp
+    public function sendWhatsapp (Request $request , Order $order)
+    {
+        $request->user()->notify(new PurchaseReminder($order));
+        return new RedirectResponse(route('admin.orders.index'), ['flash_success' => __('alerts.backend.orders.send-whatsapp-successfully')]);
     }
 }

@@ -41,10 +41,13 @@ class OrderControllerTable extends Controller
             })
             ->addColumn('actions', function ($order) {
 
-                $btn = '<a href="'.route('admin.orders.edit', $order).'" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.general.crud.edit').'" class="btn btn-primary btn-sm">
+                $btn =
+                    '<a href="'.route('admin.orders.send',$order).'" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.general.crud.send').'" class="btn btn-success btn-sm">
+                        <i class="fa fa-whatsapp"></i>
+                       </a>'.'<a href="'.route('admin.orders.edit', $order).'" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.general.crud.edit').'" class="btn btn-primary btn-sm">
                         <i class="fas fa-edit"></i>
                     </a>';
-                $btn = $btn.'<a href="'.route('admin.orders.destroy',$order).'"
+                    $btn = $btn.'<a href="'.route('admin.orders.destroy',$order).'"
                     class="btn btn-primary btn-danger btn-sm"
                     data-method="delete"
                     data-trans-button-cancel="'.trans('buttons.general.cancel').'"
