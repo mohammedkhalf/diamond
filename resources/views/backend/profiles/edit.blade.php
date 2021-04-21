@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('labels.backend.access.profiles.management') . ' | ' . __('labels.backend.access.profiles.edit'))
+@section('title', __('labels.backend.access.profiles.management') . ' | ' . __('labels.backend.access.profiles.edit-profile'))
 
 @section('breadcrumb-links')
     @include('backend.profiles.includes.breadcrumb-links')

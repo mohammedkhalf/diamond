@@ -241,6 +241,7 @@ return [
                 'all'=>'All Profiles',
                 'view'=>'view profile',
                 'create-profile'=>'Create Profile',
+                'edit-profile'=>'Edit Profile',
 
                 'table' => [
                     'patient_name'=>'Patient Name',

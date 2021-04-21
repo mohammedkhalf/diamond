@@ -22,7 +22,7 @@
 
         <div class="row mt-4">
             <div class="col">
-                <div class="table-responsive">
+                <div class="table-responsive" style="overflow-x:auto;">
                     <table class="table" id="roles-table" data-ajax_url="{{ route("admin.auth.role.get") }}">
                         <thead>
                             <tr>
