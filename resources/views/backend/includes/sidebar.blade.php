@@ -84,6 +84,7 @@
 
                 <li class="divider"></li> 
 
+
                 <li class="nav-item">
                     <a class="nav-link {{
                         active_class(Route::is('admin/faqs'))
@@ -95,7 +96,7 @@
 
                 <li class="divider"></li>
 
-                <li class="nav-item">
+            <li class="nav-item">
                     <a class="nav-link {{
                         active_class(Route::is('admin/email-templates'))
                     }}" href="{{ route('admin.email-templates.index') }}">

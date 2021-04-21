@@ -88,6 +88,7 @@ return [
             'created' => 'The order was successfully created.',
             'updated' => 'The order was successfully updated.',
             'deleted' => 'The order was successfully deleted.',
+            'send-whatsapp-successfully' => 'The Notification was send successfully',
         ],
 
         'profiles' => [

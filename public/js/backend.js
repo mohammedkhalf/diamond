@@ -5885,6 +5885,7 @@ __webpack_require__(/*! C:\Users\TW\Desktop\medical\resources\js\backend\app.js 
 module.exports = __webpack_require__(/*! C:\Users\TW\Desktop\medical\resources\js\backend\after.js */"./resources/js/backend/after.js");
 
 
+
 /***/ })
 
 },[[1,"/js/manifest","/js/vendor"]]]);
