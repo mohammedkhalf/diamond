@@ -24,10 +24,4 @@ class User extends BaseUser
     {
         return "{$this->first_name} {$this->last_name}";
     }
-
-    //Whatsapp Notification
-    public function routeNotificationForWhatsApp()
-    {
-      return $this->phone_number;
-    }
 }

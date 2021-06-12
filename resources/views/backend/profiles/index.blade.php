@@ -25,9 +25,10 @@
                     <table id="profiles-table" class="table" data-ajax_url="{{ route("admin.profiles.get") }}">
                         <thead>
                             <tr>
+                                <th>{{ trans('labels.backend.access.profiles.table.id') }}</th>
                                 <th>{{ trans('labels.backend.access.profiles.table.patient_name') }}</th>
-                                <th>{{ trans('labels.backend.access.profiles.table.phoneNumber') }}</th>
-                                <th>{{ trans('labels.backend.access.profiles.table.email') }}</th>
+                                <th>{{ trans('labels.backend.access.profiles.table.pateintComplain') }}</th>
+
                                 <th>{{ trans('labels.backend.access.profiles.table.age') }}</th>
                                 <th>{{ trans('labels.backend.access.profiles.table.height') }} cm</th>
                                 <th>{{ trans('labels.backend.access.profiles.table.weight') }} kg</th>
@@ -59,9 +60,9 @@
                         type: 'post',
                     },
                     columns: [
+                        { data: 'id', name: 'id'},
                         { data: 'patient_id', name: 'patient_id'},
-                        { data: 'phoneNumber', name: 'phoneNumber'},
-                        { data: 'email', name: 'email'},
+                        { data: 'patient_complain', name: 'patient_complain'},
                         { data: 'age', name: 'age'},
                         { data: 'height', name: 'height'},
                         { data: 'weight', name: 'weight'},

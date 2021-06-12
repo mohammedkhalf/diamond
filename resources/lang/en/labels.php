@@ -226,6 +226,7 @@ return [
                 'three_tuple_per_day'=>'3Tuple/Day',
 
                 'table' => [
+                    'id'=>'ID',
                     'patient_name'=>'Patient Name',
                     'drug_name'=>'Drug Name',
                     'amount'=>'Amount',
@@ -244,13 +245,15 @@ return [
                 'edit-profile'=>'Edit Profile',
 
                 'table' => [
+                    'id'=>'ID',
                     'patient_name'=>'Patient Name',
                     'createdat' => 'Created At',
                     'phoneNumber'=>'phone Number',
                     'email'=>'Email',
                     'age'=>'age',
                     'height'=>'height',
-                    'weight'=>'weight'
+                    'weight'=>'weight',
+                    'pateintComplain'=>'pateintComplain'
                 ],
             ],
 

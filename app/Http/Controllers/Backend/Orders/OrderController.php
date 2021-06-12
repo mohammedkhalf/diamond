@@ -17,6 +17,7 @@ use App\Http\Responses\RedirectResponse;
 use App\Models\Auth\User;
 use App\Models\Drug;
 use App\Notifications\Backend\Auth\PurchaseReminder;
+use App\Notifications\Backend\Auth\PhoneInbox;
 
 class OrderController extends Controller
 {
@@ -121,6 +122,14 @@ class OrderController extends Controller
     public function sendWhatsapp (Request $request , Order $order)
     {
         $request->user()->notify(new PurchaseReminder($order));
+        return new RedirectResponse(route('admin.orders.index'), ['flash_success' => __('alerts.backend.orders.send-whatsapp-successfully')]);
+    }
+
+    //send whatsapp
+    public function sendPhoneNumber (Request $request , Order $order)
+    {
+        // dd($order);
+        $request->user()->notify(new PhoneInbox($order));
         return new RedirectResponse(route('admin.orders.index'), ['flash_success' => __('alerts.backend.orders.send-whatsapp-successfully')]);
     }
 }

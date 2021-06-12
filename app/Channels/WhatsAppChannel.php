@@ -9,12 +9,8 @@ class WhatsAppChannel
 {
     public function send($notifiable, PurchaseReminder $notification)
     {
-
         $message = $notification->toWhatsApp($notifiable);
-        $to = '+201141161978';
-
-        // dd($to);
-
+        $to = $notification->order->users->phone_number;
         $from = config('services.twilio.whatsapp_from');
         $twilio = new Client(config('services.twilio.sid'), config('services.twilio.token'));
         return $twilio->messages->create('whatsapp:' . $to, [

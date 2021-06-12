@@ -25,6 +25,7 @@
                     <table id="drugs_table" class="table" data-ajax_url="{{ route("admin.drugs.get") }}">
                         <thead>
                             <tr>
+                                <th>{{ trans('labels.backend.access.drugs.table.id') }}</th>
                                 <th>{{ trans('labels.backend.access.drugs.table.name') }}</th>
                                 <th>{{ trans('labels.backend.access.drugs.table.manufacture') }}</th>
                                 <th>{{ trans('labels.backend.access.drugs.table.amount') }}</th>
@@ -58,7 +59,7 @@
                         type: 'post',
                     },
                     columns: [
-
+                        { data: 'id', name: 'id' },
                         { data: 'name', name: 'name' },
                         { data: 'manufacture', name: 'manufacture' },
                         { data: 'amount', name: 'amount' },

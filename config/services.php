@@ -100,4 +100,8 @@ return [
         'token' => env('TWILIO_AUTH_TOKEN'),
         'whatsapp_from' => env('TWILIO_WHATSAPP_FROM')
     ],
+
+    'nexmo' => [
+        'sms_from' => '15556666666',
+    ],
 ];

@@ -24,6 +24,9 @@ class OrderControllerTable extends Controller
      public function __invoke(ManageOrdersRequest $request)
     {
         return Datatables::of($this->repository->getForDataTable())
+            ->editColumn('id', function ($order) {
+                return $order->id;
+            })
             ->editColumn('patient_id', function ($order) {
                 return $order->users->first_name.$order->users->last_name;
             })
@@ -42,7 +45,9 @@ class OrderControllerTable extends Controller
             ->addColumn('actions', function ($order) {
 
                 $btn =
-                    '<a href="'.route('admin.orders.send',$order).'" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.general.crud.send').'" class="btn btn-success btn-sm">
+                    '<a href="'.route('admin.orders.send-phone', $order).'" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.general.crud.send').'" class="btn btn-info btn-sm">
+                      <i data-toggle="tooltip" data-placement="top" title="Phone" class="fa fa-inbox"></i>
+                      </a>'.'<a href="'.route('admin.orders.send',$order).'" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.general.crud.send').'" class="btn btn-success btn-sm">
                         <i class="fa fa-whatsapp"></i>
                        </a>'.'<a href="'.route('admin.orders.edit', $order).'" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.general.crud.edit').'" class="btn btn-primary btn-sm">
                         <i class="fas fa-edit"></i>

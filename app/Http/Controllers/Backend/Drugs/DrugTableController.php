@@ -27,6 +27,9 @@ class DrugTableController extends Controller
     public function __invoke(Request $request)
     {
         return Datatables::of($this->repository->getForDataTable())
+            ->editColumn('id', function ($drugs) {
+                return $drugs->id;
+            })
             ->editColumn('name', function ($drugs) {
                 return $drugs->name;
             })

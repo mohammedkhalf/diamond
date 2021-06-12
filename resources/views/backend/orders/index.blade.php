@@ -25,6 +25,7 @@
                     <table id="orders-table" class="table" data-ajax_url="{{ route("admin.orders.get") }}">
                         <thead>
                             <tr>
+                                <th>{{ trans('labels.backend.access.orders.table.id') }}</th>
                                 <th>{{ trans('labels.backend.access.orders.table.patient_name') }}</th>
                                 <th>{{ trans('labels.backend.access.orders.table.drug_name') }}</th>
                                 <th>{{ trans('labels.backend.access.orders.table.amount') }}</th>
@@ -58,6 +59,7 @@
                         type: 'post',
                     },
                     columns: [
+                        { data: 'id', name: 'id' },
                         { data: 'patient_id', name: 'patient_id' },
                         { data: 'drug_id', name: 'drug_id' },
                         { data: 'amount', name: 'amount' },

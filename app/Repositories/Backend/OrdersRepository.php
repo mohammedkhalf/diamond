@@ -31,14 +31,17 @@ class OrdersRepository extends BaseRepository
     public function getForDataTable()
     {
         return $this->query()
+            ->leftjoin('users','users.id','=','orders.patient_id')
+            ->leftjoin('drugs','drugs.id','=','orders.drug_id')
             ->select([
-                'id',
-                'patient_id',
-                'drug_id',
-                'amount',
-                'dose',
-                'created_at',
-                'created_at',
+                'orders.id',
+                'orders.patient_id',
+                'orders.drug_id',
+                'orders.amount',
+                'orders.dose',
+                'orders.created_at',
+                'users.first_name',
+                'drugs.name'
             ]);
     }
 

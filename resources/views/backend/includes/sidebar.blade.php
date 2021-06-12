@@ -73,7 +73,30 @@
                     </a>
                 </li>
 
+                <li class="divider"></li>
+
                 <li class="nav-item">
+                    <a class="nav-link {{
+                        active_class(Route::is('admin/drugs'))
+                    }}" href="{{route('admin.drugs.index')}}">
+                        <i class="nav-icon fas fa-pills"></i>
+                        @lang('menus.backend.sidebar.drugs')
+                    </a>
+                </li>
+
+                <li class="divider"></li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{
+                        active_class(Route::is('admin/orders'))
+                    }}" href="{{route('admin.orders.index')}}">
+                        <i class="nav-icon fa fa-shopping-cart"></i>
+                        @lang('menus.backend.sidebar.orders')
+                    </a>
+                </li>
+
+
+               <li class="nav-item">
                     <a class="nav-link {{
                         active_class(Route::is('admin/pages'))
                     }}" href="{{ route('admin.pages.index') }}">
@@ -171,28 +194,6 @@
 
                     </ul>
                 </li>
-
-                <li class="divider"></li>
-
-                <li class="nav-item">
-                    <a class="nav-link {{
-                        active_class(Route::is('admin/drugs'))
-                    }}" href="{{route('admin.drugs.index')}}">
-                        <i class="nav-icon fas fa-pills"></i>
-                        @lang('menus.backend.sidebar.drugs')
-                    </a>
-                </li>
-
-
-                <li class="nav-item">
-                    <a class="nav-link {{
-                        active_class(Route::is('admin/orders'))
-                    }}" href="{{route('admin.orders.index')}}">
-                        <i class="nav-icon fa fa-shopping-cart"></i>
-                        @lang('menus.backend.sidebar.orders')
-                    </a>
-                </li>
-
 
             @endif
         </ul>

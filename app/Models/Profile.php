@@ -14,7 +14,8 @@ class Profile extends Model
 
     protected $guarded = [];
 
-    protected $fillabel = ['patient_id',
+    protected $fillabel = [
+        'patient_id',
         'age',
         'gender',
         'height',

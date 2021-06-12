@@ -45,31 +45,33 @@ class ProfilesRepository extends BaseRepository
     public function getForDataTable()
     {
         return $this->query()
+            ->leftjoin('users', 'users.id', '=', 'profiles.patient_id')
             ->select([
-                'id',
-                'patient_id',
-                'age',
-                'gender',
-                'height',
-                'weight',
-                'patient_complain',
-                'history_of_patient_disorder',
-                'past_medical_history',
-                'family_history',
-                'diagnoses_case',
-                'use_drug',
-                'sport',
-                'cohols',
-                'smoke',
-                'caffeine',
-                'other_life_style',
-                'immunization',
-                'allergies_drugs',
-                'environment',
-                'past_history_drugs',
-                'past_history_drugs_response',
-                'current_prescribed_drugs',
-                'current_prescribed_drugs_response'
+                'profiles.id',
+                'profiles.patient_id',
+                'profiles.age',
+                'profiles.gender',
+                'profiles.height',
+                'profiles.weight',
+                'profiles.patient_complain',
+                'profiles.history_of_patient_disorder',
+                'profiles.past_medical_history',
+                'profiles.family_history',
+                'profiles.diagnoses_case',
+                'profiles.use_drug',
+                'profiles.sport',
+                'profiles.cohols',
+                'profiles.smoke',
+                'profiles.caffeine',
+                'profiles.other_life_style',
+                'profiles.immunization',
+                'profiles.allergies_drugs',
+                'profiles.environment',
+                'profiles.past_history_drugs',
+                'profiles.past_history_drugs_response',
+                'profiles.current_prescribed_drugs',
+                'profiles.current_prescribed_drugs_response',
+                'users.first_name'
             ]);
     }
 

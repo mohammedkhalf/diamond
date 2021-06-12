@@ -23,14 +23,14 @@ class ProfileControllerTable extends Controller
     public function __invoke(Request $request)
     {
         return Datatables::of($this->repository->getForDataTable())
+            ->editColumn('id', function ($profile) {
+                return $profile->id;
+            })
             ->editColumn('patient_id', function ($profile) {
-                return $profile->users->first_name . $profile->users->last_name;
+                return $profile->users->first_name;
             })
-            ->editColumn('phoneNumber', function ($profile) {
-                return $profile->users->phone_number;
-            })
-            ->editColumn('email', function ($profile) {
-                return $profile->users->email;
+            ->editColumn('pateintComplain', function ($profile) {
+                return $profile->patient_complain;
             })
             ->editColumn('age', function ($profile) {
                 return $profile->age;
