@@ -95,7 +95,7 @@
                     </a>
                 </li>
 
-
+{{--
                <li class="nav-item">
                     <a class="nav-link {{
                         active_class(Route::is('admin/pages'))
@@ -103,9 +103,9 @@
                         <i class="nav-icon fas fa-file"></i>
                         @lang('menus.backend.sidebar.pages')
                     </a>
-                </li>
+                </li> --}}
 
-                <li class="divider"></li> 
+                <li class="divider"></li>
 
 
                 <li class="nav-item">
@@ -119,14 +119,14 @@
 
                 <li class="divider"></li>
 
-            <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link {{
                         active_class(Route::is('admin/email-templates'))
                     }}" href="{{ route('admin.email-templates.index') }}">
                         <i class="nav-icon fas fa-envelope"></i>
                         @lang('menus.backend.sidebar.email-templates')
                     </a>
-                </li>
+                </li> --}}
 
                 <li class="divider"></li>
 

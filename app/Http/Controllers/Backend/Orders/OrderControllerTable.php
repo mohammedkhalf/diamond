@@ -45,9 +45,7 @@ class OrderControllerTable extends Controller
             ->addColumn('actions', function ($order) {
 
                 $btn =
-                    '<a href="'.route('admin.orders.send-phone', $order).'" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.general.crud.send').'" class="btn btn-info btn-sm">
-                      <i data-toggle="tooltip" data-placement="top" title="Phone" class="fa fa-inbox"></i>
-                      </a>'.'<a href="'.route('admin.orders.send',$order).'" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.general.crud.send').'" class="btn btn-success btn-sm">
+                    '<a href="'.route('admin.orders.send',$order).'" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.general.crud.send').'" class="btn btn-success btn-sm">
                         <i class="fa fa-whatsapp"></i>
                        </a>'.'<a href="'.route('admin.orders.edit', $order).'" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.general.crud.edit').'" class="btn btn-primary btn-sm">
                         <i class="fas fa-edit"></i>
@@ -67,5 +65,7 @@ class OrderControllerTable extends Controller
             ->make(true);
     }
 
-
+    // '<a href="'.route('admin.orders.send-phone', $order).'" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.general.crud.send').'" class="btn btn-info btn-sm">
+    // <i data-toggle="tooltip" data-placement="top" title="Phone" class="fa fa-inbox"></i>
+    // </a>'.
 }
