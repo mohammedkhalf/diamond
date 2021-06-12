@@ -21,7 +21,7 @@
 
         <div class="row mt-4">
             <div class="col">
-                <div class="table-responsive">
+                <div class="table-responsive" style="overflow-x:auto;">
                     <table class="table" id="permissions-table" data-ajax_url="{{ route("admin.auth.permission.get") }}">
                         <thead>
                             <tr>

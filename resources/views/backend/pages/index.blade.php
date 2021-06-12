@@ -21,7 +21,7 @@
 
         <div class="row mt-4">
             <div class="col">
-                <div class="table-responsive">
+                <div class="table-responsive" style="overflow-x:auto;">
                     <table id="pages-table" class="table" data-ajax_url="{{ route("admin.pages.get") }}">
                         <thead>
                             <tr>

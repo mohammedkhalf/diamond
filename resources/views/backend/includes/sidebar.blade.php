@@ -105,7 +105,8 @@
                     </a>
                 </li>
 
-                <li class="divider"></li>
+                <li class="divider"></li> 
+
 
                 <li class="nav-item">
                     <a class="nav-link {{
