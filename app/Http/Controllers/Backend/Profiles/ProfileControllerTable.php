@@ -27,7 +27,7 @@ class ProfileControllerTable extends Controller
                 return $profile->id;
             })
             ->editColumn('patient_id', function ($profile) {
-                return $profile->users->first_name;
+                return $profile->users->first_name.$profile->users->last_name;
             })
             ->editColumn('phone_number', function ($profile) {
                 return $profile->phone_number;
