@@ -119,6 +119,7 @@ return [
 
                     'content' => [
                         'overview' => [
+                            'id' => 'ID',
                             'avatar' => 'Avatar',
                             'confirmed' => 'Confirmed',
                             'created_at' => 'Created At',
@@ -245,15 +246,23 @@ return [
                 'edit-profile'=>'Edit Profile',
 
                 'table' => [
-                    'id'=>'ID',
+                    'id'=>'Code',
                     'patient_name'=>'Patient Name',
                     'createdat' => 'Created At',
-                    'phoneNumber'=>'phone Number',
+                    'phoneNumber'=>'Phone Number',
+                    'gender'=>'Gender',
+                    'therapist'=>'Therapist',
+                    'date_of_birth'=>'Date Of Birth',
+                    'material_status'=>'Material Status',
                     'email'=>'Email',
-                    'age'=>'age',
-                    'height'=>'height',
-                    'weight'=>'weight',
-                    'pateintComplain'=>'pateintComplain'
+                    'age'=>'Age',
+                    'created_at'=>'Created At',
+                    'select-status'=>'select status',
+                    'Single' =>'Single',
+                    'Married'=>'Married',
+                    'height'=>'Height',
+                    'weight'=>'Weight',
+                    'pateintComplain'=>'PateintComplain'
                 ],
             ],
 

@@ -27,11 +27,12 @@
                             <tr>
                                 <th>{{ trans('labels.backend.access.profiles.table.id') }}</th>
                                 <th>{{ trans('labels.backend.access.profiles.table.patient_name') }}</th>
-                                <th>{{ trans('labels.backend.access.profiles.table.pateintComplain') }}</th>
+                                <th>{{ trans('labels.backend.access.profiles.table.phoneNumber') }}</th>
+                                <th>{{ trans('labels.backend.access.profiles.table.material_status') }}</th>
+                                <th>{{ trans('labels.backend.access.profiles.table.date_of_birth') }}</th>
+                                <th>{{ trans('labels.backend.access.profiles.table.therapist') }} </th>
+                                <th>{{ trans('labels.backend.access.profiles.table.created_at') }} </th>
 
-                                <th>{{ trans('labels.backend.access.profiles.table.age') }}</th>
-                                <th>{{ trans('labels.backend.access.profiles.table.height') }} cm</th>
-                                <th>{{ trans('labels.backend.access.profiles.table.weight') }} kg</th>
                                 <th>{{ trans('labels.general.actions') }}</th>
                             </tr>
                         </thead>
@@ -62,10 +63,11 @@
                     columns: [
                         { data: 'id', name: 'id'},
                         { data: 'patient_id', name: 'patient_id'},
-                        { data: 'patient_complain', name: 'patient_complain'},
-                        { data: 'age', name: 'age'},
-                        { data: 'height', name: 'height'},
-                        { data: 'weight', name: 'weight'},
+                        { data: 'phone_number', name: 'phone_number'},
+                        { data: 'status', name: 'status'},
+                        { data: 'date_of_birth', name: 'date_of_birth'},
+                        { data: 'therapist', name: 'therapist'},
+                        { data: 'created_at', name: 'created_at'},
                         { data: 'actions', name: 'actions', searchable: false, sortable: false }
                     ],
                     order: [[0, "asc"]],

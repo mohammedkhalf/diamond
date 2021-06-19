@@ -29,17 +29,21 @@ class ProfileControllerTable extends Controller
             ->editColumn('patient_id', function ($profile) {
                 return $profile->users->first_name;
             })
-            ->editColumn('pateintComplain', function ($profile) {
-                return $profile->patient_complain;
+            ->editColumn('phone_number', function ($profile) {
+                return $profile->phone_number;
             })
-            ->editColumn('age', function ($profile) {
-                return $profile->age;
+            ->editColumn('status', function ($profile) {
+                return $profile->status == '1' ? trans('labels.backend.access.profiles.table.Single') :
+                trans('labels.backend.access.profiles.table.Married');
             })
-            ->editColumn('height', function ($profile) {
-                return $profile->height;
+            ->editColumn('date_of_birth', function ($profile) {
+                return $profile->date_of_birth;
             })
-            ->editColumn('weight', function ($profile) {
-                return $profile->weight;
+            ->editColumn('therapist', function ($profile) {
+                return $profile->therapist;
+            })
+            ->editColumn('created_at', function ($profile) {
+                return Carbon::parse($profile->created_at)->toDateString();
             })
             ->addColumn('actions', function ($profile) {
 

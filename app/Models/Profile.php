@@ -18,6 +18,15 @@ class Profile extends Model
         'patient_id',
         'age',
         'gender',
+        'phone_number',
+        'date_of_birth',
+        'status',
+        'therapist',
+        'address',
+        'last_receipt',
+        'last_receipt_value',
+        'payment_type',
+        'chronic_diseases',
         'height',
         'weight',
         'patient_complain',
@@ -48,6 +57,8 @@ class Profile extends Model
     public static function CreateFormRequest($request)
     {
         $profileData = Profile::create($request->only('patient_id','gender',
+        'phone_number','date_of_birth','status','therapist','address','last_receipt',
+        'last_receipt_value','payment_type','chronic_diseases',
         'age','height','weight','patient_complain','history_of_patient_disorder'
         ,'past_medical_history','family_history','diagnoses_case','use_drug','sport',
         'cohols','smoke','caffeine','other_life_style','immunization','allergies_drugs',
@@ -59,7 +70,10 @@ class Profile extends Model
 
     public static function UpdateFormRequest ($request,$profile)
     {
+        // dd($request->all());
         $updatedProfile = $profile->update($request->only('patient_id','gender',
+        'phone_number','date_of_birth','status','therapist','address','last_receipt',
+        'last_receipt_value','payment_type','chronic_diseases',
         'age','height','weight','patient_complain','history_of_patient_disorder'
         ,'past_medical_history','family_history','diagnoses_case','use_drug','sport',
         'cohols','smoke','caffeine','other_life_style','immunization','allergies_drugs',

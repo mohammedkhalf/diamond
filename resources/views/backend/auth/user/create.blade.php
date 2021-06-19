@@ -50,19 +50,12 @@
                     {{ Form::label('email', __('validation.attributes.backend.access.users.email'), [ 'class'=>'col-md-2 form-control-label']) }}
 
                     <div class="col-md-10">
-                        {{ Form::text('email', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.users.email'), 'required' => 'required']) }}
+                        {{ Form::text('email', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.users.email') , 'required' => 'required']) }}
                     </div>
                     <!--col-->
                 </div>
 
-                <!--phone Number-->
-                <div class="form-group row">
-                    {{ Form::label('phoneNumber', __('validation.attributes.backend.access.users.phone_number'), [ 'class'=>'col-md-2 form-control-label']) }}
-                    <div class="col-md-10">
-                        {{ Form::text('phone_number', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.users.phone_number'), 'required' => 'required']) }}
-                    </div>
-                    <!--col-->
-                </div>
+
 
 
                 <!--form-group-->
@@ -71,7 +64,7 @@
                     {{ Form::label('password', __('validation.attributes.backend.access.users.password'), [ 'class'=>'col-md-2 form-control-label']) }}
 
                     <div class="col-md-10">
-                        {{ Form::password('password', ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.users.password'), 'required' => 'required']) }}
+                        {{ Form::password('password', ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.users.password')]) }}
                     </div>
                     <!--col-->
                 </div>
@@ -84,7 +77,7 @@
                         {{ html()->password('password_confirmation')
                                     ->class('form-control')
                                     ->placeholder(__('validation.attributes.backend.access.users.password_confirmation'))
-                                    ->required() }}
+                                     }}   <!--  ->required() -->
                     </div>
                     <!--col-->
                 </div>

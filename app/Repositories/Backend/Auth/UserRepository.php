@@ -340,7 +340,7 @@ class UserRepository extends BaseRepository
         $user->confirmation_code = md5(uniqid(mt_rand(), true));
         $user->confirmed = isset($input['confirmed']) ? 1 : 0;
         $user->created_by = access()->user()->id;
-        $user->phone_number = $input['phone_number'];
+        // $user->phone_number = $input['phone_number'];
         return $user;
     }
 

@@ -73,7 +73,7 @@
                     </a>
                 </li>
 
-                <li class="divider"></li>
+                {{-- <li class="divider"></li>
 
                 <li class="nav-item">
                     <a class="nav-link {{
@@ -93,7 +93,7 @@
                         <i class="nav-icon fa fa-shopping-cart"></i>
                         @lang('menus.backend.sidebar.orders')
                     </a>
-                </li>
+                </li> --}}
 
 {{--
                <li class="nav-item">
@@ -105,7 +105,7 @@
                     </a>
                 </li> --}}
 
-                <li class="divider"></li>
+                {{-- <li class="divider"></li>
 
 
                 <li class="nav-item">
@@ -117,7 +117,7 @@
                     </a>
                 </li>
 
-                <li class="divider"></li>
+                <li class="divider"></li> --}}
 
                 {{-- <li class="nav-item">
                     <a class="nav-link {{
@@ -127,7 +127,7 @@
                         @lang('menus.backend.sidebar.email-templates')
                     </a>
                 </li> --}}
-
+{{--
                 <li class="divider"></li>
 
                 <li class="nav-item nav-dropdown {{
@@ -194,7 +194,7 @@
                         </li>
 
                     </ul>
-                </li>
+                </li> --}}
 
             @endif
         </ul>

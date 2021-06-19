@@ -22,6 +22,8 @@
     {{ style(mix('css/backend.css')) }}
 
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet" />
+
 
     @stack('after-styles')
     <style>
@@ -96,9 +98,11 @@
     <script src="{{ asset('/js/tinymce/tinymce.min.js')}}"></script>
     {!! script(asset('js/backend/common.js')) !!}
 
+
     @isset($js)
     @foreach($js as $j)
     {!! script(asset('js/backend/'. $j. '.js')) !!}
+
     @endforeach
     @endif
 
