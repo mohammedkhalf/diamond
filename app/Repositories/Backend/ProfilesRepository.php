@@ -53,6 +53,7 @@ class ProfilesRepository extends BaseRepository
                 'profiles.gender',
                 'profiles.phone_number',
                 'profiles.date_of_birth',
+                'profiles.created_by',
                 'profiles.status',
                 'profiles.therapist',
                 'profiles.address',

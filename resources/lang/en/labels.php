@@ -257,6 +257,7 @@ return [
                     'email'=>'Email',
                     'age'=>'Age',
                     'created_at'=>'Created At',
+                    'created_by'=>'created_by',
                     'select-status'=>'select status',
                     'Single' =>'Single',
                     'Married'=>'Married',

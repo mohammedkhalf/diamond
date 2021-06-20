@@ -39,8 +39,8 @@ class ProfileControllerTable extends Controller
             ->editColumn('date_of_birth', function ($profile) {
                 return $profile->date_of_birth;
             })
-            ->editColumn('therapist', function ($profile) {
-                return $profile->therapist;
+            ->editColumn('created_by', function ($profile) {
+                return $profile->created_by;
             })
             ->editColumn('created_at', function ($profile) {
                 return Carbon::parse($profile->created_at)->toDateString();

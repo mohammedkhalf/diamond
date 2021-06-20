@@ -320,6 +320,7 @@ return [
                     'Female'=>'انثي',
                     'yes'=>'نعم',
                     'no'=>'لا',
+                    'created_by'=>'انشا بواسطة',
                     'update_information' => 'تحديث البيانات',
                 ],
             ],
