@@ -44,13 +44,16 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link {{
-                                active_class(Route::is('admin/auth/role*'))
-                            }}" href="{{ route('admin.auth.role.index') }}">
-                                @lang('labels.backend.access.roles.management')
-                            </a>
-                        </li>
+
+                        @if(auth()->user()->hasRole('Administrator'))
+                            <li class="nav-item">
+                                <a class="nav-link {{
+                                    active_class(Route::is('admin/auth/role*'))
+                                }}" href="{{ route('admin.auth.role.index') }}">
+                                    @lang('labels.backend.access.roles.management')
+                                </a>
+                            </li>
+                        @endif
 
                         <li class="nav-item">
                             <a class="nav-link {{

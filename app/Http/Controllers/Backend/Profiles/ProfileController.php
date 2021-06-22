@@ -14,6 +14,7 @@ use App\Http\Responses\ViewResponse;
 use App\Models\Auth\User;
 use App\Models\Profile;
 use App\Http\Responses\RedirectResponse;
+use PhpCsFixer\Preg;
 
 class ProfileController extends Controller
 {
@@ -49,6 +50,9 @@ class ProfileController extends Controller
      */
     public function store(StoreProfileRequest $request)
     {
+        if(Profile::where('phone_number','=',$request->phone_number)->count() > 0)
+           return redirect(route('admin.profiles.create'))->withFlashDanger('هذا العميل مسجل من قبل');
+
         $profileData = Profile::CreateFormRequest($request);
         return new RedirectResponse(route('admin.profiles.index'), ['flash_success' => __('alerts.backend.profiles.created')]);
     }

@@ -110,7 +110,7 @@ return [
     'starts_with' => 'The :attribute must start with one of the following: :values',
     'string' => 'يجب أن يكون الحقل :attribute نصآ.',
     'timezone' => 'يجب أن يكون :attribute نطاقًا زمنيًا صحيحًا',
-    'unique' => 'قيمة الحقل :attribute مُستخدمة من قبل',
+    'unique' => 'ال:attribute مُستخدمة من قبل',
     'url' => 'صيغة الرابط :attribute غير صحيحة',
     'uuid' => 'The :attribute must be a valid UUID.',
 
