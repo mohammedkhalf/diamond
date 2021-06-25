@@ -40,9 +40,9 @@
 
             <!--gender-->
             <div class="form-group row">
-                    {{ Form::label('gender', trans('validation.attributes.backend.access.profiles.gender'), ['class' => 'col-md-2 from-control-label required']) }}
+                    {{ Form::label('gender', trans('validation.attributes.backend.access.profiles.gender'), ['class' => 'col-md-2 from-control-label']) }}
                  <div class="col-md-10">
-                    <select class="form-control"  name="gender" required>
+                    <select class="form-control"  name="gender">
                         <option value="0"> {{ trans('validation.attributes.backend.access.profiles.select-gender') }} </option>
                         @if(isset($profile))
                             <option value="1" {{  $profile->gender == 1 ? 'selected="selected"' : ''  }}> {{ trans('validation.attributes.backend.access.profiles.Male') }} </option>
@@ -58,10 +58,10 @@
 
             <!-- Date_Of_Birth -->
             <div class="form-group row">
-                {{ Form::label('Date_Of_Birth', trans('validation.attributes.backend.access.profiles.date_of_dirth'), ['class' => 'col-md-2 from-control-label required']) }}
+                {{ Form::label('Date_Of_Birth', trans('validation.attributes.backend.access.profiles.date_of_dirth'), ['class' => 'col-md-2 from-control-label']) }}
                 <div class="col-md-10">
                     <div>
-                        {{ Form::text('date_of_birth', old('Date_Of_Birth') , ['class' => 'form-control', 'id'=>'tbDate' , 'placeholder' => trans('validation.attributes.backend.access.profiles.select-date'), 'required' => 'required']) }}
+                        {{ Form::text('date_of_birth', old('Date_Of_Birth') , ['class' => 'form-control', 'id'=>'tbDate' , 'placeholder' => trans('validation.attributes.backend.access.profiles.select-date')]) }}
                     </div>
                 </div>
                 <!--col-->
@@ -69,9 +69,9 @@
 
             <!--material Status -->
             <div class="form-group row">
-                {{ Form::label('material Status', trans('labels.backend.access.profiles.table.select-status'), ['class' => 'col-md-2 from-control-label required']) }}
+                {{ Form::label('material Status', trans('labels.backend.access.profiles.table.select-status'), ['class' => 'col-md-2 from-control-label ']) }}
              <div class="col-md-10">
-                <select class="form-control"  name="status" required>
+                <select class="form-control"  name="status" >
                     <option value="0">{{ trans('labels.backend.access.profiles.table.select-status') }}</option>
                     @if(isset($profile))
                         <option value="1" {{  $profile->status == 1 ? 'selected="selected"' : ''  }}>{{ trans('labels.backend.access.profiles.table.Single') }}</option>
@@ -87,33 +87,33 @@
 
                 <!--age-->
                 <div class="form-group row">
-                    {{ Form::label('age', trans('validation.attributes.backend.access.profiles.age'), ['class' => 'col-md-2 from-control-label required']) }}
+                    {{ Form::label('age', trans('validation.attributes.backend.access.profiles.age'), ['class' => 'col-md-2 from-control-label']) }}
                     <div class="col-md-10">
-                        {{ Form::text('age', old('age') , ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.profiles.age'), 'required' => 'required']) }}
+                        {{ Form::text('age', old('age') , ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.profiles.age')]) }}
                     </div>
                 </div>
 
               <!--heigth-->
               <div class="form-group row">
-                {{ Form::label('height', trans('validation.attributes.backend.access.profiles.height'), ['class' => 'col-md-2 from-control-label required']) }}
+                {{ Form::label('height', trans('validation.attributes.backend.access.profiles.height'), ['class' => 'col-md-2 from-control-label']) }}
                 <div class="col-md-10">
-                    {{ Form::text('height', old('height') , ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.profiles.height'), 'required' => 'required']) }}
+                    {{ Form::text('height', old('height') , ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.profiles.height')]) }}
                 </div>
               </div>
 
                 <!--weight-->
                 <div class="form-group row">
-                    {{ Form::label('weight', trans('validation.attributes.backend.access.profiles.weight'), ['class' => 'col-md-2 from-control-label required']) }}
+                    {{ Form::label('weight', trans('validation.attributes.backend.access.profiles.weight'), ['class' => 'col-md-2 from-control-label']) }}
                     <div class="col-md-10">
-                        {{ Form::text('weight', old('weight') , ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.profiles.weight'), 'required' => 'required']) }}
+                        {{ Form::text('weight', old('weight') , ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.profiles.weight')]) }}
                     </div>
                 </div>
 
                 <!--therapist-->
                 <div class="form-group row">
-                    {{ Form::label('therapist', trans('validation.attributes.backend.access.profiles.therapist'), ['class' => 'col-md-2 from-control-label required']) }}
+                    {{ Form::label('therapist', trans('validation.attributes.backend.access.profiles.therapist'), ['class' => 'col-md-2 from-control-label']) }}
                     <div class="col-md-10">
-                        {{ Form::text('therapist', old('therapist') , ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.profiles.therapist'), 'required' => 'required']) }}
+                        {{ Form::text('therapist', old('therapist') , ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.profiles.therapist')]) }}
                     </div>
                 </div>
 
@@ -121,33 +121,33 @@
                 <div class="form-group row">
                     {{ Form::label('address', trans('validation.attributes.backend.access.profiles.address'), ['class' => 'col-md-2 from-control-label']) }}
                     <div class="col-md-10">
-                        {{ Form::textarea('address', old('address') , ['class' => 'form-control','rows' => 4 ,'placeholder' => trans('validation.attributes.backend.access.profiles.address') , 'required' => 'required']) }}
+                        {{ Form::textarea('address', old('address') , ['class' => 'form-control','rows' => 4 ,'placeholder' => trans('validation.attributes.backend.access.profiles.address')]) }}
                     </div>
                 </div>
 
                 <!-- Last Receipt -->
                 <div class="form-group row">
-                    {{ Form::label('last_receipt', trans('validation.attributes.backend.access.profiles.last_receipt'), ['class' => 'col-md-2 from-control-label required']) }}
+                    {{ Form::label('last_receipt', trans('validation.attributes.backend.access.profiles.last_receipt'), ['class' => 'col-md-2 from-control-label']) }}
                     <div class="col-md-10">
                         <div>
-                            {{ Form::text('last_receipt', old('last_receipt') , ['class' => 'form-control', 'id'=>'last_receipt','placeholder' => trans('validation.attributes.backend.access.profiles.last_receipt'), 'required' => 'required']) }}
+                            {{ Form::text('last_receipt', old('last_receipt') , ['class' => 'form-control', 'id'=>'last_receipt','placeholder' => trans('validation.attributes.backend.access.profiles.last_receipt')]) }}
                         </div>
                     </div>
                 </div>
 
                 <!-- Last Receipt Value -->
                 <div class="form-group row">
-                    {{ Form::label('last_receipt_value', trans('validation.attributes.backend.access.profiles.last_receipt_value'), ['class' => 'col-md-2 from-control-label required']) }}
+                    {{ Form::label('last_receipt_value', trans('validation.attributes.backend.access.profiles.last_receipt_value'), ['class' => 'col-md-2 from-control-label']) }}
                     <div class="col-md-10">
                         <div>
-                            {{ Form::text('last_receipt_value', old('last_receipt_value') , ['class' => 'form-control','placeholder' => trans('validation.attributes.backend.access.profiles.last_receipt_value'), 'required' => 'required']) }}
+                            {{ Form::text('last_receipt_value', old('last_receipt_value') , ['class' => 'form-control','placeholder' => trans('validation.attributes.backend.access.profiles.last_receipt_value')]) }}
                         </div>
                     </div>
                 </div>
 
             <!--type of customer -->
             <div class="form-group row">
-                {{ Form::label('Payment Type', trans('validation.attributes.backend.access.profiles.type_of_customer'), ['class' => 'col-md-2 from-control-label required']) }}
+                {{ Form::label('Payment Type', trans('validation.attributes.backend.access.profiles.type_of_customer'), ['class' => 'col-md-2 from-control-label']) }}
                 <div class="col-md-10">
                     <select class="form-control"  name="payment_type">
                         <option value="0"> {{ trans('validation.attributes.backend.access.profiles.choose_type_of_customer') }} </option>

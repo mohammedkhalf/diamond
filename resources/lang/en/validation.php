@@ -184,7 +184,8 @@ return [
                     'send_confirmation_email' => 'Send Confirmation E-mail',
                     'timezone' => 'Timezone',
                     'language' => 'Language',
-                    'phone_number'=>"PhoneNum(whatsapp)"
+                    'phone_number'=>'Phone Number',
+
                 ],
 
                 'pages' => [

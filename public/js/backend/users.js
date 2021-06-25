@@ -32,9 +32,9 @@
                     columns: [
 
                         { data: 'first_name', name: 'first_name' },
-                        { data: 'last_name', name: 'last_name' },
+                        // { data: 'last_name', name: 'last_name' },
                         { data: 'email', name: 'email' },
-                        { data: 'confirmed', name: 'confirmed' },
+                        { data: 'phone_number', name: 'phone_number' },
                         { data: 'roles', name: 'roles', sortable: false },
                         { data: 'created_at', name: 'created_at' },
                         { data: 'updated_at', name: 'updated_at' },

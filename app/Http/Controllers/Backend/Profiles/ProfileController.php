@@ -51,7 +51,7 @@ class ProfileController extends Controller
     public function store(StoreProfileRequest $request)
     {
         if(Profile::where('phone_number','=',$request->phone_number)->count() > 0)
-           return redirect(route('admin.profiles.create'))->withFlashDanger('هذا العميل مسجل من قبل');
+           return redirect(route('admin.profiles.create'))->withFlashDanger(trans('validation.attributes.backend.access.profiles.user_already_exist'));
 
         $profileData = Profile::CreateFormRequest($request);
         return new RedirectResponse(route('admin.profiles.index'), ['flash_success' => __('alerts.backend.profiles.created')]);

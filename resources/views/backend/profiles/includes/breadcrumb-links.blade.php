@@ -5,7 +5,7 @@
 
             <div class="dropdown-menu" aria-labelledby="breadcrumb-dropdown-1">
                 <a class="dropdown-item" href="{{ route('admin.profiles.index') }}">@lang('menus.backend.access.profiles.active')</a>
-                <a class="dropdown-item" href="{{ route('admin.profiles.create') }}">@lang('menus.backend.access.profiles.create')</a>
+                {{-- <a class="dropdown-item" href="{{ route('admin.profiles.create') }}">@lang('menus.backend.access.profiles.create')</a> --}}
             </div>
         </div><!--dropdown-->
 

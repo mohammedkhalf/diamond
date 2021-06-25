@@ -26,18 +26,22 @@ class StoreProfileRequest extends FormRequest
         return [
             'patient_id'=>['numeric','required','not_in:0'],
             'phone_number'=>['required','min:11','numeric','not_in:0'],
-            'date_of_birth'=>['required','date'],
-            'status'=>['numeric','required','not_in:0'],
-            'therapist'=>['string','required', new FilterStringRule],
-            'address'=>['string','required', new FilterStringRule],
-            'last_receipt'=>['required','date'],
-            'last_receipt_value'=>['string','required', new FilterStringRule],
-            'payment_type'=>['numeric','required','not_in:0'],
-            'chronic_diseases'=>['string','required', new FilterStringRule],
-            'gender'=>['numeric','required','not_in:0'],
-            'age'=>['numeric','required','not_in:0','min:1'],
-            'height'=>['numeric','not_in:0','min:1'],
-            'weight'=>['numeric','not_in:0','min:1'],
+            'date_of_birth'=>['date','nullable'],
+            'status'=>['numeric','nullable'],
+            'therapist'=>['string','nullable' ,new FilterStringRule],
+            'address'=>['string','nullable', new FilterStringRule],
+            'last_receipt'=>['nullable','date'],
+            'last_receipt_value'=>['string','nullable', new FilterStringRule],
+            'payment_type'=>['numeric','nullable'],
+            'chronic_diseases'=>['string','nullable', new FilterStringRule],
+
+            'gender'=>['numeric','nullable'],
+
+            'age'=>['numeric','nullable','min:1'],
+
+            'height'=>['numeric','not_in:0','nullable'],
+            'weight'=>['numeric','not_in:0','nullable'],
+
             'patient_complain'=>['string','nullable', new FilterStringRule],
             'history_of_patient_disorder'=>['string','nullable', new FilterStringRule],
             'past_medical_history'=>['string','nullable', new FilterStringRule],
@@ -57,5 +61,13 @@ class StoreProfileRequest extends FormRequest
             'current_prescribed_drugs'=>['string','nullable', new FilterStringRule],
             'current_prescribed_drugs_response'=>['string','nullable', new FilterStringRule],
         ];
+    }
+
+    public function messages()
+    {
+        return [
+            'payment_type.required'=>trans('validation.attributes.backend.access.profiles.payment_type_required')
+        ];
+
     }
 }

@@ -26,9 +26,9 @@
                         <thead>
                             <tr>
                                 <th>@lang('labels.backend.access.users.table.first_name')</th>
-                                <th>@lang('labels.backend.access.users.table.last_name')</th>
+                                {{-- <th>@lang('labels.backend.access.users.table.last_name')</th> --}}
                                 <th>@lang('labels.backend.access.users.table.email')</th>
-                                <th>@lang('labels.backend.access.users.table.confirmed')</th>
+                                <th>@lang('labels.backend.access.users.table.phone_number')</th>
                                 <th>@lang('labels.backend.access.users.table.roles')</th>
                                 <th>@lang('labels.backend.access.users.table.created')</th>
                                 <th>@lang('labels.backend.access.users.table.last_updated')</th>

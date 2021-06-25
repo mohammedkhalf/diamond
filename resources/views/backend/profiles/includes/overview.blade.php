@@ -31,10 +31,12 @@
             <tr>
                 <th>@lang('validation.attributes.backend.access.profiles.gender')</th>
                 <td>
-                    {{ $profileData->gender == '1' ?
-                      trans('validation.attributes.backend.access.profiles.Male') :
-                      trans('validation.attributes.backend.access.profiles.Female')
-                    }}
+                      @if($profileData->gender == '1')
+                        {{ trans('validation.attributes.backend.access.profiles.Male')  }}
+                      @elseif($profileData->gender == '2')
+                        {{ trans('validation.attributes.backend.access.profiles.Female') }}
+                      @else
+                      @endif
                 </td>
             </tr>
 
@@ -45,27 +47,30 @@
 
             <tr>
                 <th>@lang('validation.attributes.backend.access.profiles.status')</th>
-                <td>  {{ $profileData->status == '1' ?
-                        trans('labels.backend.access.profiles.table.Single') :
-                        trans('labels.backend.access.profiles.table.Married')
-                      }}
+                <td>
+                    @if($profileData->status == '1')
+                     {{ trans('labels.backend.access.profiles.table.Single')  }}
+                    @elseif($profileData->status == '2')
+                    {{ trans('labels.backend.access.profiles.table.Married')  }}
+                    @else
+                    @endif
                 </td>
             </tr>
 
 
             <tr>
                 <th>@lang('validation.attributes.backend.access.profiles.age')</th>
-                <td>{{ $profileData->age }} @lang('validation.attributes.backend.access.profiles.year')</td>
+                <td> {{ $profileData->age }} </td>
             </tr>
 
             <tr>
                 <th>@lang('validation.attributes.backend.access.profiles.height')</th>
-                <td>{{ $profileData->height }} @lang('validation.attributes.backend.access.profiles.cm')</td>
+                <td>{{ $profileData->height }}</td>
             </tr>
 
             <tr>
                 <th>@lang('validation.attributes.backend.access.profiles.weight')</th>
-                <td>{{ $profileData->weight }} @lang('validation.attributes.backend.access.profiles.kg')</td>
+                <td>{{ $profileData->weight }}</td>
             </tr>
 
             <tr>
@@ -84,8 +89,8 @@
             </tr>
 
             <tr>
-                <th>@lang('validation.attributes.backend.access.profiles.last_receipt_value')</th>
-                <td>{{ $profileData->last_receipt_value }} @lang('validation.attributes.backend.access.profiles.EG')</td>
+                <th>{{ trans('validation.attributes.backend.access.profiles.last_receipt_value') }} ( {{ trans ('validation.attributes.backend.access.profiles.EG') }} ) </th>
+                <td>{{ $profileData->last_receipt_value }} </td>
             </tr>
 
 
@@ -96,8 +101,9 @@
                       {{ trans('validation.attributes.backend.access.profiles.cash') }}
                     @elseif ($profileData->payment_type == '2')
                       {{ trans('validation.attributes.backend.access.profiles.contracts') }}
-                    @else
+                    @elseif ($profileData->payment_type == '3')
                       {{ trans('validation.attributes.backend.access.profiles.postpaid') }}
+                    @else
                     @endif
                 </td>
             </tr>
@@ -135,27 +141,70 @@
 
             <tr>
                 <th>@lang('validation.attributes.backend.access.profiles.use_drug')</th>
-                <td>{{ $profileData->use_drug == 1 ?  trans('validation.attributes.backend.access.profiles.yes')  :  trans('validation.attributes.backend.access.profiles.no') }} </td>
+                <td>
+
+                    @if($profileData->use_drug == 1)
+                        {{  trans('validation.attributes.backend.access.profiles.yes')  }}
+                    @elseif($profileData->use_drug == 2)
+                      {{  trans('validation.attributes.backend.access.profiles.no')  }}
+                    @else
+                    @endif
+
+                </td>
             </tr>
 
             <tr>
                 <th>@lang('validation.attributes.backend.access.profiles.sport')</th>
-                <td>{{ $profileData->sport == 1 ? trans('validation.attributes.backend.access.profiles.yes')  :  trans('validation.attributes.backend.access.profiles.no') }} </td>
+                <td>
+
+                    @if($profileData->sport == 1)
+                    {{  trans('validation.attributes.backend.access.profiles.yes')  }}
+                    @elseif($profileData->sport == 2)
+                    {{  trans('validation.attributes.backend.access.profiles.no')  }}
+                    @else
+                    @endif
+
+                </td>
             </tr>
 
             <tr>
                 <th>@lang('validation.attributes.backend.access.profiles.cohols')</th>
-                <td>{{ $profileData->cohols == 1 ? trans('validation.attributes.backend.access.profiles.yes')  :  trans('validation.attributes.backend.access.profiles.no') }} </td>
+                <td>
+
+                    @if($profileData->cohols == 1)
+                      {{  trans('validation.attributes.backend.access.profiles.yes')  }}
+                    @elseif($profileData->cohols == 2)
+                      {{  trans('validation.attributes.backend.access.profiles.no')  }}
+                    @else
+                    @endif
+
+                </td>
             </tr>
 
             <tr>
                 <th>@lang('validation.attributes.backend.access.profiles.smoke')</th>
-                <td>{{ $profileData->smoke == 1 ? trans('validation.attributes.backend.access.profiles.yes')  :  trans('validation.attributes.backend.access.profiles.no') }} </td>
+                <td>
+                    @if($profileData->smoke == 1)
+                    {{  trans('validation.attributes.backend.access.profiles.yes')  }}
+                    @elseif($profileData->smoke == 2)
+                        {{  trans('validation.attributes.backend.access.profiles.no')  }}
+                    @else
+                    @endif
+                </td>
             </tr>
 
             <tr>
                 <th>@lang('validation.attributes.backend.access.profiles.caffeine')</th>
-                <td>{{ $profileData->caffeine == 1 ? trans('validation.attributes.backend.access.profiles.yes')  :  trans('validation.attributes.backend.access.profiles.no') }} </td>
+                <td>
+
+                    @if($profileData->caffeine == 1)
+                        {{  trans('validation.attributes.backend.access.profiles.yes')  }}
+                    @elseif($profileData->caffeine == 2)
+                        {{  trans('validation.attributes.backend.access.profiles.no')  }}
+                    @else
+                    @endif
+
+                </td>
             </tr>
 
             <tr>

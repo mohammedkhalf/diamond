@@ -14,6 +14,7 @@ use App\Events\Backend\Auth\User\UserUnconfirmed;
 use App\Events\Backend\Auth\User\UserUpdated;
 use App\Exceptions\GeneralException;
 use App\Models\Auth\User;
+use App\Models\Profile;
 use App\Notifications\Backend\Auth\UserAccountActive;
 use App\Notifications\Frontend\Auth\UserNeedsConfirmation;
 use App\Repositories\BaseRepository;
@@ -46,14 +47,14 @@ class UserRepository extends BaseRepository
             ->select([
                 'users.id',
                 'users.first_name',
-                'users.last_name',
+                'users.phone_number',
+                // 'users.last_name',
                 'users.email',
                 'users.status',
-                'users.confirmed',
+                // 'users.confirmed',
                 'users.created_at',
                 'users.updated_at',
                 'users.deleted_at',
-                'users.phone_number'
             ]);
 
         if ($trashed == 'true') {
@@ -88,6 +89,9 @@ class UserRepository extends BaseRepository
 
                 // Attach New Permissions
                 $user->attachPermissions($permissions);
+
+                //insert profile record
+                Profile::create(['patient_id'=>$user->id,'phone_number'=>$user->phone_number,'created_by'=>auth()->user()->first_name]);
 
                 //Send confirmation email if requested and account approval is off
                 if (isset($data['confirmation_email']) && $user->confirmed == 0) {
@@ -333,14 +337,14 @@ class UserRepository extends BaseRepository
         $user = self::MODEL;
         $user = new $user();
         $user->first_name = $input['first_name'];
-        $user->last_name = $input['last_name'];
+        // $user->last_name = $input['last_name'];
         $user->email = $input['email'];
         $user->password = bcrypt($input['password']);
         $user->status = isset($input['status']) ? 1 : 0;
         $user->confirmation_code = md5(uniqid(mt_rand(), true));
         $user->confirmed = isset($input['confirmed']) ? 1 : 0;
         $user->created_by = access()->user()->id;
-        // $user->phone_number = $input['phone_number'];
+        $user->phone_number = $input['phone_number'];
         return $user;
     }
 

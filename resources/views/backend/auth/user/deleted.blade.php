@@ -26,7 +26,7 @@
                     <table class="table" id="users-table" data-ajax_url="{{ route("admin.auth.user.get") }}">
                         <thead>
                             <tr>
-                                <th>@lang('labels.backend.access.users.table.last_name')</th>
+                                {{-- <th>@lang('labels.backend.access.users.table.last_name')</th> --}}
                                 <th>@lang('labels.backend.access.users.table.first_name')</th>
                                 <th>@lang('labels.backend.access.users.table.email')</th>
                                 <th>@lang('labels.backend.access.users.table.confirmed')</th>

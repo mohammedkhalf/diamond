@@ -8,6 +8,7 @@ use App\Http\Requests\Backend\Auth\User\StoreUserRequest;
 use App\Http\Requests\Backend\Auth\User\UpdateUserRequest;
 use App\Http\Responses\ViewResponse;
 use App\Models\Auth\User;
+use App\Models\Profile;
 use App\Repositories\Backend\Auth\PermissionRepository;
 use App\Repositories\Backend\Auth\RoleRepository;
 use App\Repositories\Backend\Auth\UserRepository;
@@ -64,6 +65,9 @@ class UserController extends Controller
      */
     public function store(StoreUserRequest $request)
     {
+        if(User::where('phone_number','=',$request->phone_number)->count() > 0)
+           return redirect(route('admin.auth.users.create'))->withFlashDanger(trans('validation.attributes.backend.access.profiles.user_already_exist'));
+
         $this->userRepository->create($request->all());
 
         return redirect()->route('admin.auth.user.index')->withFlashSuccess(__('alerts.backend.access.users.created'));
@@ -121,6 +125,9 @@ class UserController extends Controller
      */
     public function destroy(ManageUserRequest $request, User $user)
     {
+        if(Profile::where('patient_id',$user->id)->count() > 0)
+           return redirect(route('admin.auth.user.index'))->withFlashDanger(trans('validation.attributes.backend.access.profiles.has_profile'));
+
         $this->userRepository->delete($user);
 
         return redirect()->route('admin.auth.user.deleted')->withFlashSuccess(__('alerts.backend.access.users.deleted'));

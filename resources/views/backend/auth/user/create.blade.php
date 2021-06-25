@@ -36,14 +36,24 @@
                 </div>
                 <!--form-group-->
 
+
+                <!--phone Number-->
                 <div class="form-group row">
+                    {{ Form::label('phoneNumber', __('validation.attributes.backend.access.users.phone_number'), [ 'class'=>'col-md-2 form-control-label']) }}
+                    <div class="col-md-10">
+                        {{ Form::text('phone_number', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.users.phone_number'), 'required' => 'required']) }}
+                    </div>
+                    <!--col-->
+                </div>
+
+                {{-- <div class="form-group row">
                     {{ Form::label('last_name', __('validation.attributes.backend.access.users.last_name'), [ 'class'=>'col-md-2 form-control-label']) }}
 
                     <div class="col-md-10">
                         {{ Form::text('last_name', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.users.last_name'), 'required' => 'required']) }}
                     </div>
                     <!--col-->
-                </div>
+                </div> --}}
                 <!--form-group-->
 
                 <div class="form-group row">
@@ -54,9 +64,6 @@
                     </div>
                     <!--col-->
                 </div>
-
-
-
 
                 <!--form-group-->
 
