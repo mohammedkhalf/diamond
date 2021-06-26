@@ -45,7 +45,6 @@
                             </a>
                         </li>
 
-                        @if(auth()->user()->hasRole('Administrator'))
                             <li class="nav-item">
                                 <a class="nav-link {{
                                     active_class(Route::is('admin/auth/role*'))
@@ -53,7 +52,6 @@
                                     @lang('labels.backend.access.roles.management')
                                 </a>
                             </li>
-                        @endif
 
                         <li class="nav-item">
                             <a class="nav-link {{

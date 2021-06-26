@@ -194,7 +194,7 @@ var Backend = {}; // common variable used in all the files of the backend
                     columns: [
 
                         { data: 'first_name', name: 'first_name' },
-                        { data: 'last_name', name: 'last_name' },
+                        { data: 'phone_number', name: 'phone_number' },
                         { data: 'email', name: 'email' },
                         { data: 'confirmed', name: 'confirmed' },
                         { data: 'roles', name: 'roles', sortable: false },
