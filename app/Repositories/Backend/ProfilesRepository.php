@@ -18,6 +18,7 @@ class ProfilesRepository extends BaseRepository
      * @var array
      */
     private $sortable = [
+        'code',
         'patient_id',
         'age',
         'gender',
@@ -48,6 +49,7 @@ class ProfilesRepository extends BaseRepository
             ->leftjoin('users', 'users.id', '=', 'profiles.patient_id')
             ->select([
                 'profiles.id',
+                'profiles.code',
                 'profiles.patient_id',
                 'profiles.age',
                 'profiles.gender',

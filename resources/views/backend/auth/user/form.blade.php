@@ -14,6 +14,7 @@
 
     <div class="row mt-4 mb-4">
         <div class="col">
+
             <div class="form-group row">
                 {{ Form::label('first_name', __('validation.attributes.backend.access.users.first_name'), [ 'class'=>'col-md-2 form-control-label']) }}
 
@@ -37,7 +38,7 @@
                 {{ Form::label('email', __('validation.attributes.backend.access.users.email'), [ 'class'=>'col-md-2 form-control-label']) }}
 
                 <div class="col-md-10">
-                    {{ Form::text('email', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.users.email'), 'required' => 'required']) }}
+                    {{ Form::text('email', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.users.email')]) }}
                 </div>
                 <!--col-->
             </div>

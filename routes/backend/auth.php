@@ -24,10 +24,13 @@ Route::group([
         Route::get('user/deactivated', [UserStatusController::class, 'getDeactivated'])->name('user.deactivated');
         Route::get('user/deleted', [UserStatusController::class, 'getDeleted'])->name('user.deleted');
 
+        Route::get('user/import', [UserStatusController::class, 'getImport'])->name('user.imported');
+
         // User CRUD
         Route::get('user', [UserController::class, 'index'])->name('user.index');
         Route::get('user/create', [UserController::class, 'create'])->name('user.create');
         Route::post('user', [UserController::class, 'store'])->name('user.store');
+        Route::post('importClients', [UserController::class, 'importClients'])->name('user.importClients');
 
         // Specific User
         Route::group(['prefix' => 'user/{user}'], function () {

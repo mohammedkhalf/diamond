@@ -95,4 +95,9 @@ class UserStatusController extends Controller
 
         return redirect()->route('admin.auth.user.index')->withFlashSuccess(__('alerts.backend.access.users.restored'));
     }
+
+    public function getImport(ManageUserRequest $request)
+    {
+        return view('backend.auth.user.import');
+    }
 }

@@ -45,7 +45,7 @@ class PurchaseReminder extends Notification
      */
     public function toWhatsApp($notifiable)
     {
-        $company = 'Diamond';
+        $company = 'Abdin';
         $selectedDrug = $this->order->drugs->name;
         return (new WhatsAppMessage)
             ->content(" {$company} Pharmacy reminds you of the monthly time to get {$selectedDrug} medicine");

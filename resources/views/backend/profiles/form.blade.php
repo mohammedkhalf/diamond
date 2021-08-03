@@ -11,22 +11,20 @@
     <hr>
     <div class="row mt-4 mb-4">
         <div class="col">
+
+            <!--patient code -->
+            <div class="form-group row">
+                {{ Form::label('code', trans('validation.attributes.backend.access.profiles.code'), ['class' => 'col-md-2 from-control-label required']) }}
+                <div class="col-md-10">
+                    {{ $profile->code }}
+                </div>
+            </div>
+
             <!--patient name -->
             <div class="form-group row">
                 {{ Form::label('patientName', trans('validation.attributes.backend.access.profiles.patient_name'), ['class' => 'col-md-2 from-control-label required']) }}
                 <div class="col-md-10">
-                    <select class="form-control"  name="patient_id" required>
-                        <option value="0"> {{ trans('validation.attributes.backend.access.profiles.patient_name') }} </option>
-                        @if(isset($profile))
-                            @foreach ($patients as $patientInfo)
-                            <option value="{{$patientInfo->id}}"  {{  $profile->patient_id == $patientInfo->id ? 'selected="selected"' : ''  }}  > {{$patientInfo->fullname}} </option>
-                            @endforeach
-                        @else
-                            @foreach ($patients as $patientInfo)
-                            <option value="{{$patientInfo->id}}" {{ old('patient_id') == $patientInfo->id ? 'selected' : ''  }}> {{$patientInfo->fullname}} </option>
-                            @endforeach
-                        @endif
-                    </select>
+                    {{ $profile->users->first_name }}
                 </div>
             </div>
 
@@ -34,7 +32,7 @@
             <div class="form-group row">
                 {{ Form::label('phoneNumber', __('validation.attributes.backend.access.profiles.phone_number'), [ 'class'=>'col-md-2 form-control-label']) }}
                 <div class="col-md-10">
-                    {{ Form::text('phone_number', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.profiles.phone_number'), 'required' => 'required']) }}
+                    {{ $profile->phone_number }}
                 </div>
             </div>
 

@@ -14,6 +14,11 @@ Breadcrumbs::for('admin.auth.user.deleted', function ($trail) {
     $trail->push(__('menus.backend.access.users.deleted'), route('admin.auth.user.deleted'));
 });
 
+Breadcrumbs::for('admin.auth.user.imported', function ($trail) {
+    $trail->parent('admin.auth.user.index');
+    $trail->push(__('menus.backend.access.users.imported'), route('admin.auth.user.imported'));
+});
+
 Breadcrumbs::for('admin.auth.user.create', function ($trail) {
     $trail->parent('admin.auth.user.index');
     $trail->push(__('labels.backend.access.users.create'), route('admin.auth.user.create'));

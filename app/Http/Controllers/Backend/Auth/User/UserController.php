@@ -13,6 +13,10 @@ use App\Repositories\Backend\Auth\PermissionRepository;
 use App\Repositories\Backend\Auth\RoleRepository;
 use App\Repositories\Backend\Auth\UserRepository;
 use Illuminate\Support\Facades\View;
+use App\Imports\ImportUsers;
+use Maatwebsite\Excel\Facades\Excel;
+use DB;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -34,6 +38,7 @@ class UserController extends Controller
         $this->userRepository = $userRepository;
         $this->roleRepository = $roleRepository;
         View::share('js', ['users']);
+        ini_set('max_execution_time', 600);
     }
 
     /**
@@ -131,5 +136,11 @@ class UserController extends Controller
         $this->userRepository->delete($user);
 
         return redirect()->route('admin.auth.user.deleted')->withFlashSuccess(__('alerts.backend.access.users.deleted'));
+    }
+
+    public function importClients (ManageUserRequest $request)
+    {
+        Excel::import(new ImportUsers, request()->file('import_file'));
+        return back()->with('success', 'clinets imported successfully.');
     }
 }

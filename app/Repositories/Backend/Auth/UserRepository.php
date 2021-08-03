@@ -46,6 +46,7 @@ class UserRepository extends BaseRepository
         $dataTableQuery = $this->query()
             ->select([
                 'users.id',
+                'users.code',
                 'users.first_name',
                 'users.phone_number',
                 // 'users.last_name',
@@ -91,7 +92,7 @@ class UserRepository extends BaseRepository
                 $user->attachPermissions($permissions);
 
                 //insert profile record
-                Profile::create(['patient_id'=>$user->id,'phone_number'=>$user->phone_number,'created_by'=>auth()->user()->first_name]);
+                Profile::create(['code'=>$user->code,'patient_id'=>$user->id,'phone_number'=>$user->phone_number,'created_by'=>auth()->user()->first_name]);
 
                 //Send confirmation email if requested and account approval is off
                 if (isset($data['confirmation_email']) && $user->confirmed == 0) {
@@ -131,6 +132,11 @@ class UserRepository extends BaseRepository
             if ($user->update($data)) {
                 $user->roles()->sync($roles);
                 $user->permissions()->sync($permissions);
+
+                Profile::where('patient_id',$user->id)->update([
+                    'code'=>$user->code,
+                    'phone_number'=>$user->phone_number,
+                    'created_by'=>auth()->user()->first_name]);
 
                 event(new UserUpdated($user));
 
@@ -336,6 +342,7 @@ class UserRepository extends BaseRepository
     {
         $user = self::MODEL;
         $user = new $user();
+        $user->code = $input['code'];
         $user->first_name = $input['first_name'];
         // $user->last_name = $input['last_name'];
         $user->email = $input['email'];

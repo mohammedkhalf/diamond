@@ -45,6 +45,7 @@ return [
                 'main' => 'Permissions',
                 'view' => 'View Permission',
                 'management' => 'Permission Management',
+                'import'=>'import',
             ],
 
             'pages' => [

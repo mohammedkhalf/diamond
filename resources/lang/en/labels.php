@@ -359,6 +359,10 @@ return [
                     'total' => 'email templates total|email templates total',
                 ],
             ],
+
+            'ProjectName'=>[
+                'name'=>'MedexTech'
+            ]
         ],
     ],
 

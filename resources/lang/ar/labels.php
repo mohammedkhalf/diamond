@@ -96,7 +96,8 @@ return [
                     'confirmed' => 'مؤكد',
                     'created' => 'تم الإنشاء',
                     'email' => 'البريد الإلكتروني',
-                    'id' => 'هوية شخصية',
+                    'id' => 'م',
+                    'code'=>'ك.عميل',
                     'last_updated' => 'آخر تحديث',
                     'name' => 'الإسم',
                     'first_name' => 'الاسم',
@@ -130,12 +131,15 @@ return [
                             'last_login_at' => 'آخر تسجيل دخول في',
                             'last_login_ip' => 'آخر تسجيل دخول',
                             'last_updated' => 'آخر تحديث',
-                            'name' => 'اسم',
+                            'name' => 'الاسم',
+                            'code'=>'الكود',
                             'first_name' => 'الاسم',
                             // 'last_name' => 'الكنية',
                             'last_name' => 'الاسم الثاني',
                             'status' => 'الحالة',
                             'timezone' => 'وحدة زمنية',
+                            'phone_number'=>'رقم التلفون',
+                            'address'=>'العنوان'
                         ],
                     ],
                 ],
@@ -298,7 +302,8 @@ return [
                 'edit-profile'=>'تعديل ملف',
 
                 'table' => [
-                    'id'=>'الكود',
+                    'id'=>'م',
+                    'code'=>'ك.عميل',
                     'patient_name'=>'اسم العميل',
                     'phoneNumber'=>'رقم المحمول',
                     'therapist'=>'الطبيب المعالج',
@@ -325,6 +330,46 @@ return [
                     'update_information' => 'تحديث البيانات',
                 ],
             ],
+
+            'calls'=>[
+                'management'=>'ادارة سجل المكالمات',
+                'active'=>'النشطة',
+                'all'=>'كل المكالمات',
+                'view'=>'عرض المكالمة',
+                'create-profile'=>'انشاء مكالمة',
+                'edit-profile'=>'تعديل مكالمة',
+
+                'table'=>[
+                    'id'=>'الرقم الكودي',
+                    'name'=>'الاسم',
+                    'phone'=>'رقم المحمول',
+                    'duration'=>'مدة المكالمة',
+                    'dateTime'=>'الوقت والتاريخ',
+                    'created_at'=>'انشا في'
+                ]
+            ],
+
+            'orders'=>[
+                'management'=>'ادارة الطلبات',
+                'active'=>'النشطة',
+                'all'=>'كل الطلبات',
+                'create-order'=>'اضافة طلب جديد',
+                'one_tuple_per_day'=>'جرعة/يوم',
+                'two_tuple_per_day'=>'جرعتين/يوم',
+                'three_tuple_per_day'=>'ثلاث جرعات/يوم',
+
+                'table' => [
+                    'id'=>'الرقم الكودي',
+                    'patient_name'=>'اسم المريض',
+                    'drug_name'=>'اسم الدواء',
+                    'amount'=>'الكمية',
+                    'dose'=>'الجرعة',
+                    'createdat' => 'انشا في',
+                ],
+            ],
+            'ProjectName'=>[
+                'name'=>'MedexTech'
+            ]
         ],
     ],
 

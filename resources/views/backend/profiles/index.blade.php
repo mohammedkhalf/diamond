@@ -25,7 +25,7 @@
                     <table id="profiles-table" class="table" data-ajax_url="{{ route("admin.profiles.get") }}">
                         <thead>
                             <tr>
-                                <th>{{ trans('labels.backend.access.profiles.table.id') }}</th>
+                                <th>{{ trans('labels.backend.access.profiles.table.code') }}</th>
                                 <th>{{ trans('labels.backend.access.profiles.table.patient_name') }}</th>
                                 <th>{{ trans('labels.backend.access.profiles.table.phoneNumber') }}</th>
                                 <th>{{ trans('labels.backend.access.profiles.table.material_status') }}</th>
@@ -60,7 +60,7 @@
                         type: 'post',
                     },
                     columns: [
-                        { data: 'id', name: 'id'},
+                        { data: 'code', name: 'code'},
                         { data: 'patient_id', name: 'patient_id'},
                         { data: 'phone_number', name: 'phone_number'},
                         { data: 'status', name: 'status'},

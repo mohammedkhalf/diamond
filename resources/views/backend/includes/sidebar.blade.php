@@ -4,14 +4,14 @@
             <li class="nav-title">
                 @lang('menus.backend.sidebar.general')
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{
-                    active_class(Route::is('admin/dashboard'))
-                }}" href="{{ route('admin.dashboard') }}">
-                    <i class="nav-icon fas fa-tachometer-alt"></i>
-                    @lang('menus.backend.sidebar.dashboard')
-                </a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link {{
+                        active_class(Route::is('admin/dashboard'))
+                    }}" href="{{ route('admin.dashboard') }}">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        @lang('menus.backend.sidebar.dashboard')
+                    </a>
+                </li>
 
             @if ($logged_in_user->isAdmin())
                 <li class="nav-title">
@@ -74,20 +74,20 @@
                     </a>
                 </li>
 
-                {{-- <li class="divider"></li>
+                <li class="divider"></li>
 
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link {{
-                        active_class(Route::is('admin/drugs'))
-                    }}" href="{{route('admin.drugs.index')}}">
-                        <i class="nav-icon fas fa-pills"></i>
-                        @lang('menus.backend.sidebar.drugs')
+                        active_class(Route::is('admin/calls'))
+                    }}" href="{{ route('admin.calls.index') }}">
+                        <i class="nav-icon fas  fa-phone"></i>
+                        @lang('menus.backend.sidebar.calls')
                     </a>
-                </li>
+                </li> --}}
 
                 <li class="divider"></li>
 
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link {{
                         active_class(Route::is('admin/orders'))
                     }}" href="{{route('admin.orders.index')}}">

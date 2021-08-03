@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Http\Requests\Backend\Auth\User;
-
 use Illuminate\Foundation\Http\FormRequest;
-
+use App\Rules\FilterStringRule;
 /**
  * Class StoreUserRequest.
  */
@@ -27,6 +26,7 @@ class StoreUserRequest extends FormRequest
     public function rules()
     {
         return [
+            'code'=>['required','string','max:5','unique:users,code',new FilterStringRule],
             'first_name' => 'required|max:255',
             'phone_number'=>'required|min:11|numeric|unique:users,phone_number',
             // 'last_name' => 'required|max:255',

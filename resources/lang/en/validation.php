@@ -176,6 +176,7 @@ return [
                     'confirmed' => 'Confirmed',
                     'email' => 'E-mail Address',
                     'name' => 'Name',
+                    'code'=>'code',
                     'last_name' => 'Last Name',
                     'first_name' => 'First Name',
                     'other_permissions' => 'Other Permissions',

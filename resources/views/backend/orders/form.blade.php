@@ -63,7 +63,7 @@
                  {{ Form::label('dose', trans('validation.attributes.backend.access.orders.dose'), ['class' => 'col-md-2 from-control-label required']) }}
                 <div class="col-md-10">
                     <select class="form-control"  name="dose" id="dose">
-                        <option value="0">Select Dose</option>
+                        <option value="0">{{ trans('validation.attributes.backend.access.orders.select_dose') }}</option>
                         @if(isset($order))
                         <option value="1" {{  $order->dose == 1 ? 'selected="selected"' : ''  }} > {{trans('labels.backend.access.orders.one_tuple_per_day')}} </option>
                         <option value="2"  {{  $order->dose == 2 ? 'selected="selected"' : ''  }} > {{trans('labels.backend.access.orders.two_tuple_per_day')}} </option>

@@ -175,6 +175,7 @@ return [
                     'email' => 'عنوان البريد الإلكتروني',
                     'name' => 'الإسم',
                     // 'last_name' => 'الكنية',
+                    'code'=>'الكود',
                     'last_name' => 'الاسم الثاني',
                     'first_name' => 'الاسم',
                     'other_permissions' => 'الصلاحيات الأخرى',
@@ -184,6 +185,7 @@ return [
                     'timezone' => 'وحدة زمنية',
                     'language' => 'لغة',
                     'phone_number'=>'رقم المحمول',
+                    'import'=>'استيراد عملاء جدد'
                 ],
 
                 'pages' => [
@@ -282,7 +284,15 @@ return [
                     'has_profile'=>'هذا العميل لديه ملف طبي',
                     'user_already_exist'=>'هذا العميل مسجل من قبل'
                     // 'payment_type_required'=>'طريقة الدفع مطلوبة',
-                ]
+                ],
+
+                'orders'=>[
+                    'patient_name'=>'اسم المريض',
+                    'drug_name'=>'اسم الدواء',
+                    'dose'=>'الجرعة',
+                    'amount'=>'الكمية',
+                    'select_dose'=>'اختر الجرعة'
+                ],
             ],
         ],
 

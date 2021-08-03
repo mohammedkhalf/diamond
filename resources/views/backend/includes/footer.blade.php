@@ -2,7 +2,7 @@
     <div>
         <strong>@lang('labels.general.copyright') &copy; {{ date('Y') }}
             <a href="#">
-                PharmaCare
+                {{ trans('labels.backend.access.ProjectName.name') }}
                 {{-- @lang('strings.backend.general.boilerplate_link') --}}
             </a>
         </strong> @lang('strings.backend.general.all_rights_reserved')

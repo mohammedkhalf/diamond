@@ -26,6 +26,9 @@ return [
         // The name of the super administrator role
         'admin_role' => 'administrator',
 
+        // The name of the super pharmacist role
+        'pharmacist_role'=>'pharmacist',
+
         // The default role all new registered users get added to
         'default_role' => 'user',
 

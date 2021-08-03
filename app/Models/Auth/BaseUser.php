@@ -28,9 +28,11 @@ abstract class BaseUser extends Authenticatable implements Recordable
      * @var array
      */
     protected $fillable = [
+        'code',
         'first_name',
         'last_name',
         'email',
+        'address',
         'avatar_type',
         'avatar_location',
         'password',

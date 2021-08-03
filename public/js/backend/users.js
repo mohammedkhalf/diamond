@@ -30,14 +30,13 @@
                         data: data
                     },
                     columns: [
-
-                        { data: 'first_name', name: 'first_name' },
-                        // { data: 'last_name', name: 'last_name' },
-                        { data: 'email', name: 'email' },
-                        { data: 'phone_number', name: 'phone_number' },
+                        { data: 'id', name: 'id'},
+                        { data: 'code', name: 'code'},
+                        { data: 'first_name', name: 'first_name'},
+                        // { data: 'email', name: 'email' },
+                        { data: 'phone_number', name:'phone_number'},
                         { data: 'roles', name: 'roles', sortable: false },
                         { data: 'created_at', name: 'created_at' },
-                        { data: 'updated_at', name: 'updated_at' },
                         { data: 'actions', name: 'actions', searchable: false, sortable: false }
                     ],
                     order: [[0, "asc"]],
