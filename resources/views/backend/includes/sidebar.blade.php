@@ -76,25 +76,25 @@
 
                 <li class="divider"></li>
 
-                {{-- <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link {{
                         active_class(Route::is('admin/calls'))
                     }}" href="{{ route('admin.calls.index') }}">
                         <i class="nav-icon fas  fa-phone"></i>
                         @lang('menus.backend.sidebar.calls')
                     </a>
-                </li> --}}
+                </li>
 
                 <li class="divider"></li>
 
-                {{-- <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link {{
                         active_class(Route::is('admin/orders'))
                     }}" href="{{route('admin.orders.index')}}">
                         <i class="nav-icon fa fa-shopping-cart"></i>
                         @lang('menus.backend.sidebar.orders')
                     </a>
-                </li> --}}
+                </li>
 
 {{--
                <li class="nav-item">
