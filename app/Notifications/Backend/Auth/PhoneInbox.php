@@ -55,6 +55,7 @@ class PhoneInbox extends Notification
         $company = 'Diamond';
         $selectedDrug = $this->order->drugs->name;
         return (new NexmoMessage())
+
         ->content(" {$company} Pharmacy reminds you of the monthly time to get {$selectedDrug} medicine");
     }
 
