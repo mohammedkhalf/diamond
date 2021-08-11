@@ -60,7 +60,7 @@
                     },
                     columns: [
                         { data: 'id', name: 'id' },
-                        { data: 'patient_id', name: 'patient_id' },
+                        { data: 'patient_name', name: 'patient_name' },
                         { data: 'drug_id', name: 'drug_id' },
                         { data: 'amount', name: 'amount' },
                         { data: 'dose', name: 'dose' },

@@ -62,7 +62,8 @@ class OrderController extends Controller
      */
     public function store(StoreOrdersRequest $request)
     {
-        $orderData = Order::create($request->only('patient_id','drug_id','amount','dose'));
+        // dd($request->all());
+        $orderData = Order::create($request->only('patient_name','drug_id','amount','dose'));
         return new RedirectResponse(route('admin.orders.index'), ['flash_success' => __('alerts.backend.orders.created')]);
     }
 
@@ -102,7 +103,7 @@ class OrderController extends Controller
     public function update(UpdateOrdersRequest $request, $id)
     {
         $orderData = Order::findOrFail($id);
-        $orderData->update($request->only('patient_id','drug_id','amount','dose'));
+        $orderData->update($request->only('patient_name','drug_id','amount','dose'));
         return new RedirectResponse(route('admin.orders.index'), ['flash_success' => __('alerts.backend.orders.updated')]);
     }
 

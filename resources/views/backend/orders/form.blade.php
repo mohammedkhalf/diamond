@@ -15,15 +15,15 @@
             <div class="form-group row">
                 {{ Form::label('patientName', trans('validation.attributes.backend.access.orders.patient_name'), ['class' => 'col-md-2 from-control-label required']) }}
                 <div class="col-md-10">
-                    <select class="form-control"  name="patient_id">
+                    <select class="form-control"  name="patient_name">
                         <option value="0">Select Pateint</option>
                         @if(isset($order))
                             @foreach($pateints as $pateintInfo)
-                                <option value="{{$pateintInfo->id}}" {{ $pateintInfo->id == $order->patient_id ? 'selected="selected"' : ''  }} > {{$pateintInfo->name}} </option>
+                                <option value="{{$pateintInfo->name}}" {{ $pateintInfo->first_name == $order->patient_name ? 'selected="selected"' : ''  }} > {{$pateintInfo->name}} </option>
                             @endforeach
                         @else
                             @foreach($pateints as $pateintInfo)
-                            <option value="{{$pateintInfo->id}}" {{ old('patient_id') == $pateintInfo->id ? 'selected' : ''  }} > {{$pateintInfo->name}} </option>
+                            <option value="{{$pateintInfo->name}}" {{ old('patient_name') == $pateintInfo->name ? 'selected' : ''  }} > {{$pateintInfo->name}} </option>
                             @endforeach
                         @endif
                     </select>

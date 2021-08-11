@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Requests\Backend\Orders;
-
 use Illuminate\Foundation\Http\FormRequest;
+use App\Rules\FilterStringRule;
 
 class StoreOrdersRequest extends FormRequest
 {
@@ -24,7 +24,7 @@ class StoreOrdersRequest extends FormRequest
     public function rules()
     {
         return [
-            'patient_id'=>['numeric','required','not_in:0'],
+            'patient_name'=>['string','required',new FilterStringRule],
             'drug_id'=>['numeric','required','not_in:0'],
             'amount'=>['numeric','required','not_in:0'],
             'dose'=>['string','required','max:255'],

@@ -27,8 +27,8 @@ class OrderControllerTable extends Controller
             ->editColumn('id', function ($order) {
                 return $order->id;
             })
-            ->editColumn('patient_id', function ($order) {
-                return $order->users->first_name.$order->users->last_name;
+            ->editColumn('patient_name', function ($order) {
+                return $order->patient_name;
             })
             ->editColumn('drug_id', function ($order) {
                 return $order->drugs->name;

@@ -35,6 +35,7 @@ class OrdersRepository extends BaseRepository
             ->leftjoin('drugs','drugs.id','=','orders.drug_id')
             ->select([
                 'orders.id',
+                'orders.patient_name',
                 'orders.patient_id',
                 'orders.drug_id',
                 'orders.amount',
