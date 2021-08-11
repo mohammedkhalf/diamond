@@ -1,0 +1,69 @@
+[2021-08-11 02:59:38] local.ERROR: The "-e" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"-e\" option does not exist. at E:\\process\\diamond\\vendor\\symfony\\console\\Input\\ArgvInput.php:118)
+[stacktrace]
+#0 E:\\process\\diamond\\vendor\\symfony\\console\\Input\\ArgvInput.php(100): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOptionSet('resource')
+#1 E:\\process\\diamond\\vendor\\symfony\\console\\Input\\ArgvInput.php(81): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOption('-resource')
+#2 E:\\process\\diamond\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 E:\\process\\diamond\\vendor\\symfony\\console\\Command\\Command.php(214): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 E:\\process\\diamond\\vendor\\symfony\\console\\Application.php(1009): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 E:\\process\\diamond\\vendor\\symfony\\console\\Application.php(273): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Routing\\Console\\ControllerMakeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 E:\\process\\diamond\\vendor\\symfony\\console\\Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 E:\\process\\diamond\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main}
+"} 
+[2021-08-11 03:12:12] local.DEBUG: API Request Exception - http://127.0.0.1:8000/api/calls -  - {"name":"mohammed Khalaf","phone":"01094356579","duration":"2","date_time":"2021-08-11 19:57:23"}  
+[2021-08-11 03:12:59] local.DEBUG: API Request Exception - http://localhost:8000/api/calls -  - {"name":"mohammed Khalaf","phone":"01094356579","duration":"2","date_time":"2021-08-11 19:57:23"}  
+[2021-08-11 03:14:16] local.DEBUG: API Request Exception - http://localhost:8000/api/calls -  - {"name":"mohammed Khalaf","phone":"01094356579","duration":"2","date_time":"2021-08-11 19:57:23"}  
+[2021-08-11 03:14:29] local.DEBUG: API Request Exception - http://localhost:8000/api/add-call -  - {"name":"mohammed Khalaf","phone":"01094356579","duration":"2","date_time":"2021-08-11 19:57:23"}  
+[2021-08-11 03:14:48] local.DEBUG: API Request Exception - http://localhost:8000/api/v1/add-call -  - {"name":"mohammed Khalaf","phone":"01094356579","duration":"2","date_time":"2021-08-11 19:57:23"}  
+[2021-08-11 03:14:52] local.DEBUG: API Request Exception - http://localhost:8000/api/v1/add-call -  - {"name":"mohammed Khalaf","phone":"01094356579","duration":"2","date_time":"2021-08-11 19:57:23"}  
+[2021-08-11 03:29:42] local.DEBUG: API Request Exception - http://localhost:8000/api/v1/auth/add-call - The given data was invalid. - {"name":"mohammed Khalaf","phone":null,"duration":"2","date_time":"2021-08-11 19:57:23"}  
+[2021-08-11 03:29:42] local.DEBUG: API Validation Exception - {"phone":["\u0642\u064a\u0645\u0629 phone \u0645\u0637\u0644\u0648\u0628."]}  
+[2021-08-11 03:30:02] local.DEBUG: API Request Exception - http://localhost:8000/api/v1/auth/add-call - The given data was invalid. - {"name":"mohammed Khalaf","phone":"01094356579","duration":"3","date_time":null}  
+[2021-08-11 03:30:02] local.DEBUG: API Validation Exception - {"date_time":["\u0642\u064a\u0645\u0629 date time \u0645\u0637\u0644\u0648\u0628."]}  
+[2021-08-11 03:34:32] local.ERROR: Method Illuminate\Routing\ResponseFactory::setStatusCode does not exist. {"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Routing\\ResponseFactory::setStatusCode does not exist. at E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Macroable.php:103)
+[stacktrace]
+#0 E:\\process\\diamond\\app\\Http\\Controllers\\Api\\V1\\CallsController.php(43): Illuminate\\Routing\\ResponseFactory->__call('setStatusCode', Array)
+#1 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\Api\\V1\\CallsController->store(Object(App\\Http\\Requests\\Backend\\Calls\\StoreCallsRequest))
+#2 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('store', Array)
+#3 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Api\\V1\\CallsController), 'store')
+#4 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#5 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(681): Illuminate\\Routing\\Route->run()
+#6 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(130): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 E:\\process\\diamond\\app\\Http\\Middleware\\RedirectIfAuthenticated.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#8 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): App\\Http\\Middleware\\RedirectIfAuthenticated->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#13 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(683): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#15 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(658): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#16 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(624): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#17 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(613): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#18 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(170): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#19 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(130): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#20 E:\\process\\diamond\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(60): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 E:\\process\\diamond\\app\\Http\\Middleware\\CheckForReadOnlyMode.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): App\\Http\\Middleware\\CheckForReadOnlyMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(63): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 E:\\process\\diamond\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 E:\\process\\diamond\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#37 E:\\process\\diamond\\public\\index.php(53): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#38 E:\\process\\diamond\\server.php(19): require_once('E:\\\\process\\\\diam...')
+#39 {main}
+"} 
+[2021-08-11 03:34:32] local.DEBUG: API Request Exception - http://localhost:8000/api/v1/auth/add-call - Method Illuminate\Routing\ResponseFactory::setStatusCode does not exist. - {"name":"mohammed Khalaf","phone":"01094356579","duration":"3","date_time":"2021-08-11 19:57:23"}  
