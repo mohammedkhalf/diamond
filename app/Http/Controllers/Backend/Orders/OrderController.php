@@ -62,8 +62,8 @@ class OrderController extends Controller
      */
     public function store(StoreOrdersRequest $request)
     {
-        // dd($request->all());
-        $orderData = Order::create($request->only('patient_name','drug_id','amount','dose'));
+        $userData = User::findOrFail($request->patient_id);
+        $orderData = Order::create(array_merge($request->only('patient_id','drug_id','amount','dose') , ['patient_name'=>$userData->first_name]));
         return new RedirectResponse(route('admin.orders.index'), ['flash_success' => __('alerts.backend.orders.created')]);
     }
 

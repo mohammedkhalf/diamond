@@ -24,7 +24,7 @@ class StoreOrdersRequest extends FormRequest
     public function rules()
     {
         return [
-            'patient_name'=>['string','required',new FilterStringRule],
+            'patient_id'=>['numeric','required','not_in:0'],
             'drug_id'=>['numeric','required','not_in:0'],
             'amount'=>['numeric','required','not_in:0'],
             'dose'=>['string','required','max:255'],
