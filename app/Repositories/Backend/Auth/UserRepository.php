@@ -91,9 +91,6 @@ class UserRepository extends BaseRepository
                 // Attach New Permissions
                 $user->attachPermissions($permissions);
 
-                //insert profile record
-                Profile::create(['code'=>$user->code,'patient_id'=>$user->id,'phone_number'=>$user->phone_number,'created_by'=>auth()->user()->first_name]);
-
                 //Send confirmation email if requested and account approval is off
                 if (isset($data['confirmation_email']) && $user->confirmed == 0) {
                     $user->notify(new UserNeedsConfirmation($user->confirmation_code));

@@ -61,7 +61,7 @@
                     },
                     columns: [
                         { data: 'code', name: 'code'},
-                        { data: 'patient_id', name: 'patient_id'},
+                        { data: 'pateint_name', name: 'pateint_name'},
                         { data: 'phone_number', name: 'phone_number'},
                         { data: 'status', name: 'status'},
                         { data: 'date_of_birth', name: 'date_of_birth'},

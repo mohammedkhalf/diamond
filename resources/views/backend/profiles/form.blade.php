@@ -16,7 +16,7 @@
             <div class="form-group row">
                 {{ Form::label('code', trans('validation.attributes.backend.access.profiles.code'), ['class' => 'col-md-2 from-control-label required']) }}
                 <div class="col-md-10">
-                    {{ $profile->code }}
+                    {{ Form::text('code', old('code') , ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.profiles.code')]) }}
                 </div>
             </div>
 
@@ -24,7 +24,7 @@
             <div class="form-group row">
                 {{ Form::label('patientName', trans('validation.attributes.backend.access.profiles.patient_name'), ['class' => 'col-md-2 from-control-label required']) }}
                 <div class="col-md-10">
-                    {{ $profile->users->first_name }}
+                    {{ Form::text('pateint_name', old('pateint_name') , ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.profiles.patient_name')]) }}
                 </div>
             </div>
 
@@ -32,7 +32,7 @@
             <div class="form-group row">
                 {{ Form::label('phoneNumber', __('validation.attributes.backend.access.profiles.phone_number'), [ 'class'=>'col-md-2 form-control-label']) }}
                 <div class="col-md-10">
-                    {{ $profile->phone_number }}
+                    {{ Form::text('phone_number', old('phone_number') , ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.access.profiles.phone_number')]) }}
                 </div>
             </div>
 
@@ -180,39 +180,39 @@
                 </div>
 
                 <!--history of patient disorder-->
-                <div class="form-group row">
+                {{-- <div class="form-group row">
                     {{ Form::label('history_of_patient_disorder', trans('validation.attributes.backend.access.profiles.history_of_patient_disorder'), ['class' => 'col-md-2 from-control-label']) }}
                     <div class="col-md-10">
                             {{ Form::textarea('history_of_patient_disorder', old('history_of_patient_disorder') , ['class' => 'form-control','rows' => 4 ,'placeholder' => trans('validation.attributes.backend.access.profiles.history_of_patient_disorder')]) }}
                         </div>
-                </div>
+                </div> --}}
 
                 <!-- past medical history -->
-                <div class="form-group row">
+                {{-- <div class="form-group row">
                     {{ Form::label('past_medical_history', trans('validation.attributes.backend.access.profiles.past_medical_history'), ['class' => 'col-md-2 from-control-label']) }}
                     <div class="col-md-10">
                             {{ Form::textarea('past_medical_history', old('past_medical_history') , ['class' => 'form-control','rows' => 4 ,'placeholder' => trans('validation.attributes.backend.access.profiles.past_medical_history')]) }}
                     </div>
-                </div>
+                </div> --}}
 
                 <!-- family history -->
-                <div class="form-group row">
+                {{-- <div class="form-group row">
                     {{ Form::label('family_history', trans('validation.attributes.backend.access.profiles.family_history'), ['class' => 'col-md-2 from-control-label']) }}
                     <div class="col-md-10">
                             {{ Form::textarea('family_history', old('family_history') , ['class' => 'form-control','rows' => 4 ,'placeholder' => trans('validation.attributes.backend.access.profiles.family_history')]) }}
                     </div>
-                </div>
+                </div> --}}
 
                 <!-- diagnoses Case -->
-                <div class="form-group row">
+                {{-- <div class="form-group row">
                     {{ Form::label('diagnoses_case', trans('validation.attributes.backend.access.profiles.diagnoses_case'), ['class' => 'col-md-2 from-control-label']) }}
                     <div class="col-md-10">
                             {{ Form::textarea('diagnoses_case', old('diagnoses_case') , ['class' => 'form-control','rows' => 4 ,'placeholder' => trans('validation.attributes.backend.access.profiles.diagnoses_case')]) }}
                     </div>
-                </div>
+                </div> --}}
 
                 <!-- use Drug -->
-                <div class="form-group row">
+                {{-- <div class="form-group row">
                     {{ Form::label('use_drug', trans('validation.attributes.backend.access.profiles.use_drug'), ['class' => 'col-md-2 from-control-label']) }}
                     <div class="col-md-10">
                         <select class="form-control"  name="use_drug">
@@ -226,10 +226,10 @@
                             @endif
                         </select>
                     </div>
-                </div>
+                </div> --}}
 
                 <!-- sport -->
-                <div class="form-group row">
+                {{-- <div class="form-group row">
                     {{ Form::label('sport', trans('validation.attributes.backend.access.profiles.sport'), ['class' => 'col-md-2 from-control-label']) }}
                     <div class="col-md-10">
                             <select class="form-control"  name="sport">
@@ -245,10 +245,10 @@
 
                             </select>
                     </div>
-                </div>
+                </div> --}}
 
                 <!-- cohols -->
-                <div class="form-group row">
+                {{-- <div class="form-group row">
                     {{ Form::label('cohols', trans('validation.attributes.backend.access.profiles.cohols'), ['class' => 'col-md-2 from-control-label']) }}
                     <div class="col-md-10">
                             <select class="form-control"  name="cohols">
@@ -262,10 +262,10 @@
                                 @endif
                             </select>
                     </div>
-                </div>
+                </div> --}}
 
                 <!-- smoke -->
-                <div class="form-group row">
+                {{-- <div class="form-group row">
                     {{ Form::label('smoke', trans('validation.attributes.backend.access.profiles.smoke'), ['class' => 'col-md-2 from-control-label']) }}
                     <div class="col-md-10">
                             <select class="form-control"  name="smoke">
@@ -281,10 +281,10 @@
 
                             </select>
                     </div>
-                </div>
+                </div> --}}
 
                  <!-- caffeine -->
-                <div class="form-group row">
+                {{-- <div class="form-group row">
                     {{ Form::label('caffeine', trans('validation.attributes.backend.access.profiles.caffeine'), ['class' => 'col-md-2 from-control-label']) }}
                     <div class="col-md-10">
                         <select class="form-control"  name="caffeine">
@@ -299,15 +299,15 @@
 
                         </select>
                     </div>
-                </div>
+                </div> --}}
 
                 <!-- other Life Style -->
-                <div class="form-group row">
+                {{-- <div class="form-group row">
                     {{ Form::label('other_life_style', trans('validation.attributes.backend.access.profiles.other_life_style'), ['class' => 'col-md-2 from-control-label']) }}
                     <div class="col-md-10">
                         {{ Form::textarea('other_life_style', old('other_life_style') , ['class' => 'form-control','rows' => 4 ,'placeholder' => trans('validation.attributes.backend.access.profiles.other_life_style')]) }}
                     </div>
-                </div>
+                </div> --}}
 
                 <!-- immunization -->
                 {{-- <div class="form-group row">
@@ -366,7 +366,7 @@
                    </div> --}}
 
 
-        </div>
+
 
         </div>
         <!--col-->

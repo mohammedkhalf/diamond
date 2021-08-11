@@ -3,7 +3,7 @@
         <table class="table table-hover">
             <tr>
                 <th>@lang('labels.backend.access.users.tabs.content.overview.avatar')</th>
-                <td><img src="{{ $profileData->users->picture }}" class="user-profile-image" /></td>
+                <td><img src="https://www.gravatar.com/avatar/64e1b8d34f425d19e1ee2ea7236d3028.jpg?s=80&d=mm&r=g" class="user-profile-image" /></td>
             </tr>
 
             <tr>
@@ -14,12 +14,7 @@
 
             <tr>
                 <th>@lang('labels.backend.access.users.tabs.content.overview.name')</th>
-                <td>{{ $profileData->users->name }}</td>
-            </tr>
-
-            <tr>
-                <th>@lang('labels.backend.access.users.tabs.content.overview.email')</th>
-                <td>{{ $profileData->users->email }}</td>
+                <td>{{ $profileData->pateint_name }}</td>
             </tr>
 
 
@@ -119,7 +114,7 @@
                 <td>{{ $profileData->patient_complain }} </td>
             </tr>
 
-            <tr>
+            {{-- <tr>
                 <th>@lang('validation.attributes.backend.access.profiles.history_of_patient_disorder')</th>
                 <td>{{ $profileData->history_of_patient_disorder }} </td>
             </tr>
@@ -210,7 +205,7 @@
             <tr>
                 <th>@lang('validation.attributes.backend.access.profiles.other_life_style')</th>
                 <td>{{ $profileData->other_life_style  }} </td>
-            </tr>
+            </tr> --}}
 
             {{-- <tr>
                 <th>@lang('validation.attributes.backend.access.profiles.immunization')</th>

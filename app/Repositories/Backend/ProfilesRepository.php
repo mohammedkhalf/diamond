@@ -51,6 +51,7 @@ class ProfilesRepository extends BaseRepository
                 'profiles.id',
                 'profiles.code',
                 'profiles.patient_id',
+                'profiles.pateint_name',
                 'profiles.age',
                 'profiles.gender',
                 'profiles.phone_number',

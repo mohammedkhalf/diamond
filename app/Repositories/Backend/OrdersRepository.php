@@ -40,7 +40,6 @@ class OrdersRepository extends BaseRepository
                 'orders.amount',
                 'orders.dose',
                 'orders.created_at',
-                'users.first_name',
                 'drugs.name'
             ]);
     }
