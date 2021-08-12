@@ -34,7 +34,7 @@ class CallControllerTable extends Controller
                 return $call->phone;
             })
             ->editColumn('created_at', function ($call) {
-                return Carbon::parse($call->created_at);
+                return Carbon::parse($call->created_at)->format('Y-m-d g:i A');
             })
             ->addColumn('actions', function ($call) {
                 return '<a href="'.route('admin.calls.destroy',$call).'"
