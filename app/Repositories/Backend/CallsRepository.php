@@ -25,8 +25,6 @@ class CallsRepository extends BaseRepository
                 'call_logs.id',
                 'call_logs.name',
                 'call_logs.phone',
-                'call_logs.duration',
-                'call_logs.date_time',
                 'call_logs.created_at',
             ]);
     }

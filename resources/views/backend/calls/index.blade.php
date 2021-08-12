@@ -28,8 +28,6 @@
                                 <th>{{ trans('labels.backend.access.calls.table.id') }}</th>
                                 <th>{{ trans('labels.backend.access.calls.table.name') }}</th>
                                 <th>{{ trans('labels.backend.access.calls.table.phone') }}</th>
-                                <th>{{ trans('labels.backend.access.calls.table.dateTime') }}</th>
-                                <th>{{ trans('labels.backend.access.calls.table.duration') }}</th>
                                 <th>{{ trans('labels.backend.access.calls.table.created_at') }} </th>
                                 <th>{{ trans('labels.general.actions') }}</th>
                             </tr>
@@ -62,8 +60,6 @@
                         { data: 'id', name: 'id'},
                         { data: 'name', name: 'name'},
                         { data: 'phone', name: 'phone'},
-                        { data: 'date_time', name: 'date_time'},
-                        { data: 'duration', name: 'duration'},
                         { data: 'created_at', name: 'created_at'},
                         { data: 'actions', name: 'actions', searchable: false, sortable: false }
                     ],

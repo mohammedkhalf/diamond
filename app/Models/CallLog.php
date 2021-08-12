@@ -13,5 +13,5 @@ class CallLog extends Model
 
     protected $guarded = [];
 
-    protected $fillabel = ['name','phone','duration','date_time'];
+    protected $fillabel = ['name','phone'];
 }
